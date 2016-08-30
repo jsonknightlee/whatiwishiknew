@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third Party apps
     'userprofile',
-    'django_markdown'
+    'django_markdown',
     'storages'
 
 ]
