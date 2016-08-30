@@ -35,14 +35,14 @@ class IndexView(ListView):
             print(instance)
         context = {"topics": category}
         return render(self, 'posts/index.html', context)
-'''
+
     def formview(self, request):
         if 'username' in request.session:
             username = request.session['username']
             return render(request, 'welcome.html', {"username": username})
         else:
             return render(request, 'login_user.html', {})
-'''
+
 
 # View individual posts
 class Details(DetailView):
@@ -202,8 +202,11 @@ class UserFormView(View):
         return render(request, 'posts/login_user.html', {'form': form})
 
 
-@login_required()
 def logout_user(request):
+    try:
+        del request.session['username']
+    except:
+        pass
     form = UserForm(request.POST or None)
     context = {
         "form": form,
@@ -211,11 +214,10 @@ def logout_user(request):
     return render(request, 'posts/login_user.html', context)
 
 
-@login_required()
 def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
-        # request.session['username'] = username
+        request.session['username'] = username
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is not None:
