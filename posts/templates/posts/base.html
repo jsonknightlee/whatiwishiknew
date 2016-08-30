@@ -15,6 +15,7 @@
 
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
 
@@ -56,6 +57,7 @@
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; <span class="navguide">Post</span>
                     </a>
                 </li>
+                {% if user.is_authenticated %}
                  <li class="">
                     <a href="{% url 'userprofile:your_profile' %}">
                         {% if user.userprofile.avatar.url %}
@@ -65,6 +67,13 @@
                         {% endif %}
                     </a>
                 </li>
+                {% else %}
+                 <li class="">
+                    <a href="">
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor {{request.session.session_key}}</span>
+                    </a>
+                </li>
+                {% endif %}
                 <li class="">
                     <a href="{% url 'posts:about' %}">
                         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; <span class="navguide">About</span>

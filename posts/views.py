@@ -15,6 +15,7 @@ from django.views import generic
 from django.db.models import Q
 from django.core.mail import send_mail
 from django.conf import settings
+from django.views.decorators.cache import cache_control
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.template import RequestContext
 
@@ -202,15 +203,16 @@ class UserFormView(View):
         return render(request, 'posts/login_user.html', {'form': form})
 
 
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def logout_user(request):
-    try:
-        del request.session['username']
-    except:
-        pass
     form = UserForm(request.POST or None)
     context = {
         "form": form,
     }
+    try:
+        del request.session['username']
+    except:
+        pass
     return render(request, 'posts/login_user.html', context)
 
 
