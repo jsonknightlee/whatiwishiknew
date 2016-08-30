@@ -21,14 +21,14 @@
         <div>
         <br/>
         <a class="btn btn-primary" href="{% url 'posts:add_comment_to_post' pk=post.pk %}">Add comment</a>
-        <a href="{% url 'posts:post_update' pk=post.pk %}">Edit Post</a>
+        <!--a href="{% url 'posts:post_update' pk=post.pk %}">Edit Post</a>
         <form action="{% url 'posts:post_delete' post.id %}" method="post" style="display: inline; left: 300px;">
             {% csrf_token %}
             <input type="hidden" name="post_id" value="{{ post.id }}"/>
             <button type="submit" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-trash"></span>
             </button>
-        </form>
+        </form-->
         <br/>
             <br/>
             {% for comment in post.comments.all reversed %}

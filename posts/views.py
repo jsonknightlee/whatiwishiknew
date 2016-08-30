@@ -36,6 +36,13 @@ class IndexView(ListView):
         context = {"topics": category}
         return render(self, 'posts/index.html', context)
 
+    def formview(self, request):
+        if 'username' in request.session:
+            username = request.session['username']
+            return render(request, 'welcome.html', {"username": username})
+        else:
+            return render(request, 'login_user.html', {})
+
 
 # View individual posts
 class Details(DetailView):
@@ -142,6 +149,7 @@ def post_update(request):
     return render(request, 'posts/update_post.html', context)
 '''
 
+
 def welcome(request):
     user = User.objects.filter(user=request.user)
     return render(request, 'posts/welcome.html', {'user': user})
@@ -193,8 +201,13 @@ class UserFormView(View):
                     return redirect('posts:index')
         return render(request, 'posts/login_user.html', {'form': form})
 
+
 @login_required()
 def logout_user(request):
+    try:
+        del request.session['username']
+    except:
+        pass
     form = UserForm(request.POST or None)
     context = {
         "form": form,
@@ -202,10 +215,11 @@ def logout_user(request):
     return render(request, 'posts/login_user.html', context)
 
 
-
+@login_required()
 def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
+        request.session['username'] = username
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is not None:
@@ -237,7 +251,7 @@ def down_vote(request, post_id):
         p.upvote -= 1
         p.save()
         return render_to_response("posts/down_vote.html", {'post_id': post_id, 'type': 'down_vote',
-                                                        'post': p, 'user': request.user})
+                                                           'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/login/?next=%s' % request.path)
 
@@ -253,7 +267,7 @@ class CategoriesDetail(DetailView):
     template_name = 'posts/category_detail.html'
 
 
-#Search Navigation
+# Search Navigation
 
 def search(request):
     query = request.GET.get("q")
@@ -290,8 +304,13 @@ class YourPosts(generic.ListView):
         return Post.objects.filter(user=self.request.user).order_by('-post_date')
 
 
-def view_user(request, pk):
-    posts = Post.objects.all()
-    profile = User.objects.get(pk=pk)
+# Sessions
+
+
+'''
+def view_user(request, user):
+    posts = Post.objects.get(user=user)
+    profile = User.objects.get()
     context = {'posts': posts, 'profile': profile}
     return render(request, 'posts/view_user.html', context)
+'''

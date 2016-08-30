@@ -5,29 +5,31 @@
 
 {% if request.user.is_authenticated %}
 <div class="quotes">
-    <div class="right">
-        <h3>Knowledge ~</h3>
-        <h5 class="cursive"> a detailed familiarity with, or understanding of, a person, thing or situation.</h5>
-        <hr/>
-        <h5 class="quote">"Sometimes life is going to hit you in the head with a brick. Don't lose faith. - <strong>Steve Jobs</strong>"</h5>
-        <br/>
-        <h5 class="quote">"An investment in knowledge pays the best interest - <strong>Benjamin Franklin</strong>"</h5>
-        <br/>
-        <h5 class="quote">"Knowledge will bring you the opportunity to make a difference - <strong>Claire Fagin</strong>"</h5>
-        <br/>
-        <h5 class="quote">"Knowledge is the food of the soul - <strong>Plato</strong>"</h5>
-        <br/>
-        <h5 class="quote">"Those that know, do. Those that understand, teach. - <strong>Aristotle</strong>"</h5>
-        <hr/>
+        <div class="right">
+            <h3>Knowledge ~</h3>
+            <h5 class="cursive"> a detailed familiarity with, or understanding of, a person, thing or situation.</h5>
+            <hr/>
+            <h5 class="quote">"Sometimes life is going to hit you in the head with a brick. Don't lose faith. - <strong>Steve Jobs</strong>"</h5>
+            <br/>
+            <h5 class="quote">"An investment in knowledge pays the best interest - <strong>Benjamin Franklin</strong>"</h5>
+            <br/>
+            <h5 class="quote">"Knowledge will bring you the opportunity to make a difference - <strong>Claire Fagin</strong>"</h5>
+            <br/>
+            <h5 class="quote">"Knowledge is the food of the soul - <strong>Plato</strong>"</h5>
+            <br/>
+            <h5 class="quote">"Those that know, do. Those that understand, teach. - <strong>Aristotle</strong>"</h5>
+            <hr/>
+        </div>
     </div>
-</div>
+
+
 <div class="main">
 
     {% for post in all_posts %}
     <div class="content">
 
         <h1><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title }}</a> </h1>
-            <p><strong> Posted by </strong> <a href="{% url 'posts:view_user' pk=user.pk %}"> <span class="idex"><strong>{{ post.user }}</strong> </span></a> <strong>in</strong> <span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
+            <p><strong> Posted by </strong> <span class="idex"><strong>{{ post.user }}</strong> </span> <strong>in</strong> <span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
                  <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
                             <img src="{{ post.image.url }}" class="img-responsive">

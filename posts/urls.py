@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^search/', views.search, name='search'),
     url(r'^about/', views.about, name='about'),
     url(r'^your_posts/(?P<pk>[0-9]+)/$', views.YourPosts.as_view(), name='viewit'),
-    url(r'^view_posts/(?P<pk>[0-9]+)/$', views.view_user, name='view_user'),
+    # url(r'^view_posts/(?P<pk>[0-9]+)/$', views.view_user, name='view_user'),
 
 
 
