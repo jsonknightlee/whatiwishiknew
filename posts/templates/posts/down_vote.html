@@ -1,0 +1,24 @@
+{% extends 'posts/base_category.html' %}
+
+{% block body %}
+<div class="upvote">
+{% if post_id %}
+   <div id="space"></div>
+   <p>You {{type}}d post {{post_id}}:</p>
+   <div id="up_post">
+	Posted by <em>{{post.user}}</em> on {{post.post_date}}
+	[down votes: {{post.down_vote}}]
+        <br>
+        <blockquote>
+	   {{post.post_body}}
+        </blockquote>
+   </div>
+{% else %}
+   <p>No post selected.</p>
+{% endif %}
+
+<div id="room"></div>
+    <b><a href="{% url 'posts:index' %}">Return to Main Page</a></b>
+<div id="area"></div>
+</div>
+{% endblock %}

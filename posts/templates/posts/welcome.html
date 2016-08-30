@@ -1,0 +1,31 @@
+
+
+{% extends 'posts/base.html' %}
+{% block title %} Welcome  {% endblock %}
+
+{% block body %}
+
+<div class="left">
+
+</div>
+
+<div class="main">
+    <div class="content">
+
+    <p> Welcome, {{ request.user.username }}. Thank you for Logging in.</p>
+
+    <p> Please wait while we redirect you.</p>
+        </div>
+
+</div>
+
+<script>
+    function redirect(){
+       window.location.href = "http://www.wiwik.online/posts/";
+    }
+
+    setTimeout(redirect, 5000); //2000 is equivalent to 2 seconds
+</script>
+
+
+{% endblock %}

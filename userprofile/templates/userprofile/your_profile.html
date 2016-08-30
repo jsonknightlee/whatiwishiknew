@@ -1,0 +1,39 @@
+{% extends 'posts/base.html' %}
+{% block title %}Wiwik | Update Profile{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-offset-3 col-md-5">
+            <div class="panel panel-default dash">
+                <div class="panel-body">
+
+                        {% csrf_token %}
+                        <h1>Your Profile: {{ user.username }}</h1>
+                        <h4>Bio:</h4>
+                        <h5>{{ user.userprofile.bio }}</h5>
+                        <h4>Your Profile Picture: </h4>
+                        {% if user.userprofile.avatar.url %}
+                        <img class="img-responsive" src="{{ user.userprofile.avatar.url }}" alt="{{ user.username }}" />
+                        {% else %}
+                        <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ user.username }}"/>
+                        {% endif %}
+                    <br/>
+                    <div>
+                    <a href="{% url 'userprofile:update' %}">Update Your Profile</a> &nbsp;| &nbsp;
+                    <a href="{% url 'posts:viewit' user.id %}">Your posts </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

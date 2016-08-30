@@ -1,0 +1,1 @@
+@"c:\users\libbya~1\desktop\deploy~1\tribvl\wiwik\myenv\scripts\python.exe" "c:\users\libbya~1\desktop\deploy~1\tribvl\wiwik\myenv\Scripts\markdown_py" %*

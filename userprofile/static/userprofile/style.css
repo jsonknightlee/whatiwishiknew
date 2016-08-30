@@ -1,0 +1,131 @@
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+}
+
+.update{
+margin-top: 100px;
+}
+
+.post-thumb{
+    border-radius: 40%;
+    width: auto;
+    height: auto;
+    max-width: 60px;
+    max-height: 40px
+
+}
+
+.loops{
+margin-top:200px;
+left: 200px;
+}
+
+.left{
+position: absolute;
+height:80%;
+width: 225px;
+left: 10px; top: 100px;
+float: left;
+background-color: #f0f0f0
+}
+
+.main{
+position: absolute;
+height: auto;
+width:700px;
+top: 50%;
+left: 40%;
+margin: -200px 50px 0 -200px;
+padding-bottom: 20px;
+background-color: #ffffff;
+-moz-box-shadow: -5px -5px 5px 5px #888;
+-webkit-box-shadow: -5px -5px 5px 5px#888;
+box-shadow: -5px -5px 5px 5px #888;
+
+}
+
+
+.content{
+position:relative;
+width: 650px;
+left:20px;
+top: 20px;
+word-wrap: break-word;
+text-overflow:ellipsis;
+}
+
+
+
+p{
+font-family: Verdana;
+}
+
+a{
+    text-decoration: none;
+}
+
+intros{
+
+left: 40%;
+}
+
+.comment{
+
+color: gray
+
+}
+
+comm{
+
+left: 10%;
+
+}
+
+.author{
+
+color: #1fbed6;
+
+}
+
+
+h4{
+
+color: #1fbed6;
+
+}
+.idex{
+
+font-size: 16px;
+color: #1fbed6;
+}
+
+
+.holder{
+
+color:#0C4D69;
+
+}
+
+.tiny{
+
+color: gray;
+font-size: 12px;
+
+}
+
+.dark{
+
+font-size: 14px;
+
+}
+
+h5{
+
+font-size: 16px;
+font-family: Verdana;
+
+}

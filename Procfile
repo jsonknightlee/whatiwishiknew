@@ -1,0 +1,1 @@
+web: gunicorn wiwik.wsgi --log-file -

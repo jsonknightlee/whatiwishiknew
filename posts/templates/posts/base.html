@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Wiwik{% endblock %}</title>
+    {% load staticfiles %}
+
+<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Belgrano|Amethysta|IM+Fell+Great+Primer+SC|Open+Sans" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{% static 'posts/style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.boostrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/media/web/jquery.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">WIWIK</a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="{% url 'posts:index' %}">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; <span class="navhome">Home</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="">
+                        <span class="gap" aria-hidden="true"></span>&nbsp;
+                    </a>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'posts:search' %}">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" id="search" placeholder="Search...">
+                </div>
+                <button type="submit" class="btn btn-default" >Search</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                 <li class="">
+                    <a href="{% url 'posts:wiwik' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; <span class="navguide">Post</span>
+                    </a>
+                </li>
+                 <li class="">
+                    <a href="{% url 'userprofile:your_profile' %}">
+                        {% if user.userprofile.avatar.url %}
+                        <span><img class="thumb" src="{{ user.userprofile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        {% else %}
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        {% endif %}
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'posts:about' %}">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; <span class="navguide">About</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'posts:logout_user' %} ">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; <span class="navguide">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="left">
+    <h3>WIWIK TOPICS</h3>
+        <div class="topics">
+            <a href="{% url 'posts:category_detail' '1' %}"><h5>Animals</h5></a>
+            <a href="{% url 'posts:category_detail' '2' %}"><h5>Art & Creative</h5></a>
+            <a href="{% url 'posts:category_detail' '3' %}"><h5>Astronomy & Space Travel</h5></a>
+            <a href="{% url 'posts:category_detail' '4' %}"><h5>Business</h5></a>
+            <a href="{% url 'posts:category_detail' '5' %}"><h5>Education</h5></a>
+            <a href="{% url 'posts:category_detail' '6' %}"><h5>Entertainment</h5></a>
+            <a href="{% url 'posts:category_detail' '7' %}"><h5>Family & Parenting</h5></a>
+            <a href="{% url 'posts:category_detail' '8' %}"><h5>Food</h5></a>
+            <a href="{% url 'posts:category_detail' '9' %}"><h5>Health & Lifestyle</h5></a>
+            <a href="{% url 'posts:category_detail' '10' %}"><h5>Innovation</h5></a>
+            <a href="{% url 'posts:category_detail' '11' %}"><h5>Medical</h5></a>
+            <a href="{% url 'posts:category_detail' '12' %}"><h5>Nature</h5></a>
+            <a href="{% url 'posts:category_detail' '13' %}"><h5>People</h5></a>
+            <a href="{% url 'posts:category_detail' '14' %}"><h5>Politics</h5></a>
+            <a href="{% url 'posts:category_detail' '15' %}"><h5>Relationships</h5></a>
+            <a href="{% url 'posts:category_detail' '16' %}"><h5>Science</h5></a>
+            <a href="{% url 'posts:category_detail' '17' %}"><h5>Sport</h5></a>
+            <a href="{% url 'posts:category_detail' '18' %}"><h5>Tech</h5></a>
+            <a href="{% url 'posts:category_detail' '19' %}"><h5>Travel & Automobiles</h5></a>
+            <a href="{% url 'posts:category_detail' '20' %}"><h5>General</h5></a>
+        </div>
+</div>
+
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

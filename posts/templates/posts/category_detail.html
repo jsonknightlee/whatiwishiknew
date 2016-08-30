@@ -1,0 +1,24 @@
+{% extends 'posts/base.html' %}
+
+{% block body %}
+<div class="main">
+    <div class="topic-content">
+        <h1 class="topic-headings">What I Wish I Knew about <span class="topic-head">{{categories.topics}}</span></h1>
+        <hr/>
+        <br/>
+
+        {% for post in categories.hats.all %}
+
+            <h3><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title }}</a> </h3>
+
+            <h5><strong>Posted by : </strong><span class="author"><strong>{{ post.user}}</strong></span></h5>
+            <h5 class="tiny"><strong>{{ post.post_date }}</strong></h5>
+            <a href="#"><button type="button" class="btn btn-info"> Votes | {{ post.upvote }}</button></a>
+            <br/>
+            <br/>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

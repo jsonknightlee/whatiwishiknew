@@ -1,0 +1,29 @@
+{% extends 'posts/base.html' %}
+{% block title %}Wiwik | Update Profile{% endblock %}
+
+
+{{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-offset-3 col-md-7">
+            <div class="panel panel-default makePost">
+                <div class="panel-body">
+                    <h2> Update Your Profile: </h2>
+                    <form class="form_horizontal" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'posts/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

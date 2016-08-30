@@ -1,0 +1,30 @@
+{% extends 'posts/base.html' %}
+{% block title %}Wiwik | Update Profile{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="main">
+        <div class="content">
+
+    <h1>Posts you have created: {{ user.username }}</h1>
+        {% for post in all_posts %}
+            <a href="{% url 'posts:detail' pk=post.pk %}"><h4>{{ post.post_title }}</h4></a>
+            <a href="{% url 'posts:post_update' pk=post.pk %}">Edit Post</a> |
+            <form action="{% url 'posts:post_delete' post.id %}" method="post" style="display: inline; left: 300px;">
+            {% csrf_token %}
+            <input type="hidden" name="post_id" value="{{ post.id }}"/>
+            <button type="submit" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </form>
+        <br/>
+        <hr/>
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

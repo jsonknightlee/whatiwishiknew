@@ -1,0 +1,34 @@
+{% extends 'posts/base.html' %}
+{% block title %}Wiwik | Update Profile{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="main">
+        <div class="content">
+
+    <h1>Profile : {{ user.username }}</h1>
+
+
+            <h5>Name: {{ profile.first_name }}</h5>
+            <h5>Surname: {{ profile.last_name }}</h5>
+            <h5>Email: {{ profile.email }}</h5>
+            <h5>Bio: {{ user.userprofile.bio }}</h5>
+            <h5>Avatar:</h5>
+            <img src="{{ user.userprofile.avatar.url }}"/>
+
+
+
+        {% for post in posts %}
+            <a href="{% url 'posts:detail' pk=user.pk %}"><h4>{{ post.post_title }}</h4></a>
+
+        <br/>
+        <hr/>
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'posts/base_category.html' %}
+
+
+{% block body %}
+<div class="left">
+    <h3>Wiwik Topics</h3>
+{% for field in all_categories %}
+    <p><a href="{% url 'posts:category_detail' field.id %}">{{field.topics}}</a></p>
+    {% endfor %}
+</div>
+{% endblock %}

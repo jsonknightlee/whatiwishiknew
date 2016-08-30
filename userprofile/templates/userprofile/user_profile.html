@@ -1,0 +1,61 @@
+<!-- Use this for update profile to have all the details there
+
+{% extends 'posts/base.html' %}
+{% block title %}Wiwik | Update Profile{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-offset-3 col-md-6">
+            <div class="panel panel-default update">
+                <div class="panel-body">
+                    <form class="form_horizontal" action=" " method="post" enctype="multipart/form-data">
+                        <h3>Edit Your Profile: {{ user.username }} </h3>
+                        <br/>
+                        {% csrf_token %}
+
+                            <label class="control-label col-md-2">Username:</label>
+                                <div class="col-sm-10">{{ user.username}}</div>
+                             <div class="col-sm-10"><input type="text" placeholder="username" /></div>
+                            <label class="control-label col-md-2">First Name:</label>
+                                <div class="col-sm-10">{{ user.first_name}}</div>
+                             <div class="col-sm-10"><input type="text" placeholder="first name" /></div>
+                                <label class="control-label col-md-2">Last Name:</label>
+                                <div class="col-sm-10">{{ user.last_name}}</div>
+                             <div class="col-sm-10"><input type="text" placeholder="last name"/>
+                         <form class="form_horizontal" action="" method="post" enctype="multipart/form-data">
+                            <label class=" col-sm-2">Bio:</label>
+                                <div class="col-sm-10">{{ user.userprofile.bio}}</div>
+                             <div class="col-sm-10"><input type="text" id="bio" placeholder="bio" name="bio"/></div>
+                            <label class="control-label col-md-2">Avatar:</label>
+                                <div class="col-sm-10"><img src="{{ user.userprofile.avatar.url }}" class="post-thumb" /></div>
+                            <div class="col-sm-10"><input id="avatar" type="image" placeholder="avatar" name="avatar" title="avatar"/></div>
+                            <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Edit Profile</button>
+                            </div>
+                        </div>
+                             </form>
+                             
+
+                      {% for field in form %}
+                         <div class="form-group">
+                             <div class="col-sm-offset-2 col-sm-10">
+                            <span class="text-danger small">{{ field.errors }}</span>
+                            </div>
+                             </div>
+                            {% endfor %}
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
