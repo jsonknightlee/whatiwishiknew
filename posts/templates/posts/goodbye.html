@@ -1,0 +1,28 @@
+{% extends 'posts/base_landing.html' %}
+
+{% block title %}WIWIK | GOODBYE{% endblock %}
+
+{% block body %}
+
+<div class="blackness">
+    <div class="homer">
+
+        <div class="land">
+            <h3>Thank you. See again you soon.</h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function redirect(){
+       window.location.href = "http://www.wiwik.online/";
+    }
+
+    setTimeout(redirect, 5000); //2000 is equivalent to 2 seconds
+</script>
+
+
+{% endblock %}

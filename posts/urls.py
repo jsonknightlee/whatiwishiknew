@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/delete/$', views.PostDelete.as_view(), name='post_delete'),
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
     url(r'^login_user/$', views.login_user, name='login_user'),
-    url(r'^logout_user/$', views.logout_user, name='logout_user'),
+    # url(r'^logout_user/$', views.logout_user, name='logout_user'),
     url(r'^welcome/$', views.welcome, name='welcome'),
     url(r'^create/$', views.post_create, name="wiwik"),
     url(r'^(?P<pk>[0-9]+)/$', views.Details.as_view(), name='detail'),
@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^search/', views.search, name='search'),
     url(r'^about/', views.about, name='about'),
     url(r'^your_posts/(?P<pk>[0-9]+)/$', views.YourPosts.as_view(), name='viewit'),
+    url(r'^logging_out/goodbye/$', views.logout_user, name='logout_user')
     # url(r'^view_posts/(?P<pk>[0-9]+)/$', views.view_user, name='view_user'),
 
 

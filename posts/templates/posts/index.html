@@ -24,7 +24,6 @@
 
 
 <div class="main">
-    {% if user.is_authenticated %}
     {% for post in all_posts %}
     <div class="content">
 
@@ -72,9 +71,6 @@
 </div>
     {% else %}
     <a href="{% url 'posts:login_user' %}">Login</a>
-{% endif %}
-    {% else %}
-        <p style="margin-top: 100px; margin-left: 350px;">Please login.</p>
 {% endif %}
 
 {% endblock %}

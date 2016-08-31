@@ -26,6 +26,8 @@ font-size: 72px;
 text-shadow: 1px 2px #A5C5D7;
 }
 
+
+
 .register{
 margin-top: 100px;
 margin-right: 550px;
@@ -299,6 +301,12 @@ margin-bottom:20px;
 padding-left: 20px;
 border: 1px solid #C2D5D7;
 
+}
+
+.one{
+margin-top: 200px;
+margin-left: 200px;
+color: #000000;
 }
 
 .about-content{
