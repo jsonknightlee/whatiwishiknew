@@ -17,9 +17,11 @@
 
 
 .land{
+width:auto;
+float: left;
 font-weight: bold;
 padding-top: 50px;
-margin-left: 500px;
+margin-left: 60%;
 color: #000000;
 font-family: 'Amethysta', sans-serif;
 font-size: 72px;

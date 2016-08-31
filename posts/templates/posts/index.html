@@ -3,26 +3,29 @@
 
 {% block body %}
 
-
-<div class="quotes">
-        <div class="right">
-            <h3>Knowledge ~</h3>
-            <h5 class="cursive"> a detailed familiarity with, or understanding of, a person, thing or situation.</h5>
-            <hr/>
-            <h5 class="quote">"Sometimes life is going to hit you in the head with a brick. Don't lose faith. - <strong>Steve Jobs</strong>"</h5>
-            <br/>
-            <h5 class="quote">"An investment in knowledge pays the best interest - <strong>Benjamin Franklin</strong>"</h5>
-            <br/>
-            <h5 class="quote">"Knowledge will bring you the opportunity to make a difference - <strong>Claire Fagin</strong>"</h5>
-            <br/>
-            <h5 class="quote">"Knowledge is the food of the soul - <strong>Plato</strong>"</h5>
-            <br/>
-            <h5 class="quote">"Those that know, do. Those that understand, teach. - <strong>Aristotle</strong>"</h5>
-            <hr/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="quotes">
+            <div class="right">
+                <h3>Knowledge ~</h3>
+                <h5 class="cursive"> a detailed familiarity with, or understanding of, a person, thing or situation.</h5>
+                <hr/>
+                <h5 class="quote">"Sometimes life is going to hit you in the head with a brick. Don't lose faith. - <strong>Steve Jobs</strong>"</h5>
+                <br/>
+                <h5 class="quote">"An investment in knowledge pays the best interest - <strong>Benjamin Franklin</strong>"</h5>
+                <br/>
+                <h5 class="quote">"Knowledge will bring you the opportunity to make a difference - <strong>Claire Fagin</strong>"</h5>
+                <br/>
+                <h5 class="quote">"Knowledge is the food of the soul - <strong>Plato</strong>"</h5>
+                <br/>
+                <h5 class="quote">"Those that know, do. Those that understand, teach. - <strong>Aristotle</strong>"</h5>
+                <hr/>
+             </div>
         </div>
     </div>
+</div>
 
-
+<div class="container-fluid">
 <div class="main">
     {% for post in all_posts %}
     <div class="content">
@@ -68,6 +71,7 @@
 
     {% endfor %}
 
+    </div>
 </div>
 
 

@@ -5,14 +5,23 @@
     <title>{% block title %}Wiwik{% endblock %}</title>
     {% load staticfiles %}
 
-<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--
+<link rel="shortcut icon" type="image/png" href="{% static 'static/favicon.ico' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Belgrano|Amethysta|IM+Fell+Great+Primer+SC|Open+Sans" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="{% static 'posts/style.css' %}" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.boostrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/media/web/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.boostrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="{% static 'posts/js/main.js' %}"></script>
+-->
 
+    <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy|Lato|Belgrano|Amethysta|IM+Fell+Great+Primer+SC|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'posts/js/main.js' %}"></script>
 </head>
 <body>
 
@@ -90,34 +99,36 @@
     </div>
 </nav>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="left">
 
-<div class="left">
-
-    <h3>WIWIK TOPICS</h3>
-        <div class="topics">
-            <a href="{% url 'posts:category_detail' '1' %}"><h5>Animals</h5></a>
-            <a href="{% url 'posts:category_detail' '2' %}"><h5>Art & Creative</h5></a>
-            <a href="{% url 'posts:category_detail' '3' %}"><h5>Astronomy & Space Travel</h5></a>
-            <a href="{% url 'posts:category_detail' '4' %}"><h5>Business</h5></a>
-            <a href="{% url 'posts:category_detail' '5' %}"><h5>Education</h5></a>
-            <a href="{% url 'posts:category_detail' '6' %}"><h5>Entertainment</h5></a>
-            <a href="{% url 'posts:category_detail' '7' %}"><h5>Family & Parenting</h5></a>
-            <a href="{% url 'posts:category_detail' '8' %}"><h5>Food</h5></a>
-            <a href="{% url 'posts:category_detail' '9' %}"><h5>Health & Lifestyle</h5></a>
-            <a href="{% url 'posts:category_detail' '10' %}"><h5>Innovation</h5></a>
-            <a href="{% url 'posts:category_detail' '11' %}"><h5>Medical</h5></a>
-            <a href="{% url 'posts:category_detail' '12' %}"><h5>Nature</h5></a>
-            <a href="{% url 'posts:category_detail' '13' %}"><h5>People</h5></a>
-            <a href="{% url 'posts:category_detail' '14' %}"><h5>Politics</h5></a>
-            <a href="{% url 'posts:category_detail' '15' %}"><h5>Relationships</h5></a>
-            <a href="{% url 'posts:category_detail' '16' %}"><h5>Science</h5></a>
-            <a href="{% url 'posts:category_detail' '17' %}"><h5>Sport</h5></a>
-            <a href="{% url 'posts:category_detail' '18' %}"><h5>Tech</h5></a>
-            <a href="{% url 'posts:category_detail' '19' %}"><h5>Travel & Automobiles</h5></a>
-            <a href="{% url 'posts:category_detail' '20' %}"><h5>General</h5></a>
+            <h3>WIWIK TOPICS</h3>
+            <div class="topics">
+                <a href="{% url 'posts:category_detail' '1' %}"><h5>Animals</h5></a>
+                <a href="{% url 'posts:category_detail' '2' %}"><h5>Art & Creative</h5></a>
+                <a href="{% url 'posts:category_detail' '3' %}"><h5>Astronomy & Space Travel</h5></a>
+                <a href="{% url 'posts:category_detail' '4' %}"><h5>Business</h5></a>
+                <a href="{% url 'posts:category_detail' '5' %}"><h5>Education</h5></a>
+                <a href="{% url 'posts:category_detail' '6' %}"><h5>Entertainment</h5></a>
+                <a href="{% url 'posts:category_detail' '7' %}"><h5>Family & Parenting</h5></a>
+                <a href="{% url 'posts:category_detail' '8' %}"><h5>Food</h5></a>
+                <a href="{% url 'posts:category_detail' '9' %}"><h5>Health & Lifestyle</h5></a>
+                <a href="{% url 'posts:category_detail' '10' %}"><h5>Innovation</h5></a>
+                <a href="{% url 'posts:category_detail' '11' %}"><h5>Medical</h5></a>
+                <a href="{% url 'posts:category_detail' '12' %}"><h5>Nature</h5></a>
+                <a href="{% url 'posts:category_detail' '13' %}"><h5>People</h5></a>
+                <a href="{% url 'posts:category_detail' '14' %}"><h5>Politics</h5></a>
+                <a href="{% url 'posts:category_detail' '15' %}"><h5>Relationships</h5></a>
+                <a href="{% url 'posts:category_detail' '16' %}"><h5>Science</h5></a>
+                <a href="{% url 'posts:category_detail' '17' %}"><h5>Sport</h5></a>
+                <a href="{% url 'posts:category_detail' '18' %}"><h5>Tech</h5></a>
+                <a href="{% url 'posts:category_detail' '19' %}"><h5>Travel & Automobiles</h5></a>
+                <a href="{% url 'posts:category_detail' '20' %}"><h5>General</h5></a>
+            </div>
         </div>
+    </div>
 </div>
-
 
 
 {% block body %}
