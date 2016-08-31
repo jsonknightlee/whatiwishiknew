@@ -96,7 +96,7 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     post_pk = comment.post.pk
     comment.delete()
-    return redirect(request,'posts:detail', pk=post_pk)
+    return redirect(request, 'posts:detail', pk=post_pk)
 
 
 def post_create(request):
@@ -277,8 +277,8 @@ def search(request):
     query = request.GET.get("q")
     if query:
         queryset_list = Post.objects.filter(Q(post_title__icontains=query) |
-                                        Q(post_body__icontains=query)
-                                        ).distinct()
+                                            Q(post_body__icontains=query)
+                                            ).distinct()
         context = {"queryset_list": queryset_list}
         return render(request, 'posts/search.html', context)
     elif query is None:
@@ -318,3 +318,25 @@ def view_user(request, user):
     context = {'posts': posts, 'profile': profile}
     return render(request, 'posts/view_user.html', context)
 '''
+# Error Pages
+
+
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    response = render_to_response('500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
+
+def handler400(request):
+    response = render_to_response('400.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response

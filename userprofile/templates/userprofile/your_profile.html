@@ -22,6 +22,12 @@
                         <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ user.username }}"/>
                         {% endif %}
                     <br/>
+                    <h4>Name:</h4>
+                    <h5>{{ user.first_name }}</h5>
+                    <h4>Last Name:</h4>
+                    <h5>{{ user.last_name }}</h5>
+                    <h4>Email:</h4>
+                    <h5>{{ user.email }}</h5>
                     <div>
                     <a href="{% url 'userprofile:update' %}">Update Your Profile</a> &nbsp;| &nbsp;
                     <a href="{% url 'posts:viewit' user.id %}">Your posts </a>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}Wiwik{% endblock %}</title>
     {% load staticfiles %}
-
+<!--
 <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Belgrano|Amethysta|IM+Fell+Great+Primer+SC" rel="stylesheet" type="text/css" />
@@ -12,6 +12,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.boostrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/media/web/jquery.js"></script>
+-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy|Lato|Belgrano|Amethysta|IM+Fell+Great+Primer+SC|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/media/web/jquery.js"></script>
+    <script src="{% static 'posts/js/main.js' %}"></script>
 
 </head>
 <body>

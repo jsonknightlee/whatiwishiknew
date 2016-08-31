@@ -1,7 +1,9 @@
 {% extends 'posts/base.html' %}
+{% block title %} Wiwik | Home {% endblock %}
 {% load django_markdown %}
 
 {% block body %}
+
 
 <div class="container-fluid">
     <div class="row">
@@ -40,7 +42,7 @@
                         {% endif %}
                 </a>
                 <br/>
-            <div><h5>{{ post.post_body|markdown|truncatechars_html:100 }}</h5></div>
+            <div class="test">{{ post.post_body|markdown }}</div>
 
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
@@ -73,6 +75,5 @@
 
     </div>
 </div>
-
 
 {% endblock %}

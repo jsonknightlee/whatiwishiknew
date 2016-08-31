@@ -28,7 +28,9 @@ font-size: 72px;
 text-shadow: 1px 2px #A5C5D7;
 }
 
-
+.more{
+font-size:10px;
+}
 
 .register{
 margin-top: 100px;
@@ -48,10 +50,11 @@ margin-left: 450px;
 }
 */
 
-navbar-nav{
+.navbar-nav{
 
     color: #ffffff;
 }
+
 
 .ignite{
 -ms-transform: rotate(7deg); /* IE 9 */
@@ -121,6 +124,16 @@ color: #D3D3D3;
 .cursive{
 text-decoration: cursive;
 font-style: italic;
+
+}
+
+.heading{
+font-family: 'Lora', sans-serif;
+font-size:30px;
+color: white;
+margin-top: 20px;
+margin-right:20px;
+
 }
 
 .right{
@@ -171,7 +184,13 @@ font-family: 'Belgrano', sans-serif;
 
 .navbar-default {
     background-color: #000000;
+    color: #ffffff;
     border-bottom: 3px solid #A5C5D7;
+}
+
+.navbar-default .navbar-brand{
+    font-family: 'Lora', serif;
+    color: #ffffff;
 }
 
 
@@ -205,13 +224,10 @@ margin-top: 100px;
 margin-top: 100px;
 }
 
-.navbar-brand{
-    font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
-}
 
 .navbar-header{
-    color: white;
+    color: #ffffff;
+    font-family: 'Lora', serif;
 }
 
 .right{
@@ -396,4 +412,8 @@ font-size: 14px;
 .upvote{
 
 margin-top:100px;
+}
+
+.colo{
+color: #FFFFFF;
 }
