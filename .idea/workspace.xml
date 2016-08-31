@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc4ab4e1-2137-4196-8b71-678b2d9b37c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/favicon.ico" afterPath="$PROJECT_DIR$/posts/static/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/posts/style.css" afterPath="$PROJECT_DIR$/posts/static/posts/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/about.html" afterPath="$PROJECT_DIR$/posts/templates/posts/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_category.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_landing.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_landing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_visitor.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_visitor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/categories_list.html" afterPath="$PROJECT_DIR$/posts/templates/posts/categories_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/category_detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/category_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/dashboard.html" afterPath="$PROJECT_DIR$/posts/templates/posts/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/down_vote.html" afterPath="$PROJECT_DIR$/posts/templates/posts/down_vote.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/goodbye.html" afterPath="$PROJECT_DIR$/posts/templates/posts/goodbye.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/home.html" afterPath="$PROJECT_DIR$/posts/templates/posts/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/index.html" afterPath="$PROJECT_DIR$/posts/templates/posts/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/registration_form.html" afterPath="$PROJECT_DIR$/posts/templates/posts/registration_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/search.html" afterPath="$PROJECT_DIR$/posts/templates/posts/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/update_post.html" afterPath="$PROJECT_DIR$/posts/templates/posts/update_post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/upvote.html" afterPath="$PROJECT_DIR$/posts/templates/posts/upvote.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/welcome.html" afterPath="$PROJECT_DIR$/posts/templates/posts/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/your_posts.html" afterPath="$PROJECT_DIR$/posts/templates/posts/your_posts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/views.py" afterPath="$PROJECT_DIR$/posts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/forms.py" afterPath="$PROJECT_DIR$/userprofile/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userprofile/templates/userprofile/your_profile.html" afterPath="$PROJECT_DIR$/userprofile/templates/userprofile/your_profile.html" />
     </list>
     <ignored path="wiwik.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,31 +41,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/templates/posts/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="45" column="97" selection-start-line="45" selection-start-column="97" selection-end-line="45" selection-end-column="97" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="131" column="11" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upvote.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/templates/posts/upvote.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="down_vote.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/posts/templates/posts/down_vote.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -207,13 +185,11 @@
         <option value="$PROJECT_DIR$/posts/templates/posts/dashboard.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/category_detail.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/detail.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/down_vote.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/goodbye.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/home.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/registration_form.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/search.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/update_post.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/upvote.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/welcome.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/base_detail.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/your_posts.html" />
@@ -222,6 +198,8 @@
         <option value="$PROJECT_DIR$/userprofile/templates/userprofile/your_profile.html" />
         <option value="$PROJECT_DIR$/userprofile/forms.py" />
         <option value="$PROJECT_DIR$/posts/views.py" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/upvote.html" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/down_vote.html" />
       </list>
     </option>
   </component>
@@ -843,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/down_vote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/form_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -927,14 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/upvote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1084,6 +1046,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/upvote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/down_vote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding />
         </state>
       </provider>
