@@ -340,3 +340,4 @@ def handler400(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
+
