@@ -43,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="122" column="181" selection-start-line="122" selection-start-column="181" selection-end-line="122" selection-end-column="181" />
+              <caret line="122" column="194" selection-start-line="122" selection-start-column="194" selection-end-line="122" selection-end-column="194" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -962,7 +962,7 @@
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="122" column="181" selection-start-line="122" selection-start-column="181" selection-end-line="122" selection-end-column="181" />
+          <caret line="122" column="194" selection-start-line="122" selection-start-column="194" selection-end-line="122" selection-end-column="194" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
