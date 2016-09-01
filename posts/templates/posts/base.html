@@ -90,7 +90,7 @@
                 </li>
                 {% else %}
                  <li class="">
-                    <a href="">
+                    <a href="{% url 'posts:login_user' %}">
                         <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor {{ request.session.session_key|truncatechars:7 }}</span>
                     </a>
                 </li>
@@ -100,11 +100,20 @@
                         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; <span class="navguide">About</span>
                     </a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="">
                     <a href="{% url 'posts:logout_user' %} ">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; <span class="navguide">Logout</span>
                     </a>
                 </li>
+                {% else %}
+                <li class="">
+                    <a href="{% url 'posts:login_user' %} ">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; <span class="navguide">Login</span>
+                    </a>
+                </li>
+                {% endif %}
+
             </ul>
         </div>
 

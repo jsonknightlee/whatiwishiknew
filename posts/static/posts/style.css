@@ -17,8 +17,6 @@
 
 
 .land{
-width:auto;
-float: left;
 font-weight: bold;
 padding-top: 50px;
 margin-left: 500px;
@@ -60,11 +58,12 @@ margin-left: 450px;
 -ms-transform: rotate(7deg); /* IE 9 */
 -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
 transform: rotate(7deg);
-opacity: 0.5;
-text-align: center;
+opacity: 1.5;
+margin-left: 650px;
+margin-top: 40px;
 color: #D5CFA2, #FFFFFF;
 font-family: 'Open Sans', sans-serif;
-text-shadow: 20px 25px 4px #000000;
+text-shadow: 20px 25px 3px #000000;
 }
 
 
@@ -72,12 +71,12 @@ text-shadow: 20px 25px 4px #000000;
 -ms-transform: rotate(7deg); /* IE 9 */
 -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
 transform: rotate(7deg);
-margin-top: 100px;
-opacity: 0.5;
+margin-top: 65px;
+opacity: 2.5;
 margin-left: 800px;
 color: #000000;
 font-family: 'Open Sans', sans-serif;
-text-shadow: 25px 25px 4px #ffffff;
+text-shadow: 20px 25px 3px #ffffff;
 }
 
 .navbar{

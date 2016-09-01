@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bc4ab4e1-2137-4196-8b71-678b2d9b37c9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/posts/style.css" afterPath="$PROJECT_DIR$/posts/static/posts/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/about.html" afterPath="$PROJECT_DIR$/posts/templates/posts/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_landing.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_landing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/base_detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/base_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/detail.html" afterPath="$PROJECT_DIR$/posts/templates/posts/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/home.html" afterPath="$PROJECT_DIR$/posts/templates/posts/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/templates/posts/index.html" afterPath="$PROJECT_DIR$/posts/templates/posts/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/posts/style.css" afterPath="$PROJECT_DIR$/static/posts/style.css" />
     </list>
     <ignored path="wiwik.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,12 +33,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="down_vote.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/templates/posts/down_vote.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+                <marker date="1472673286701" expanded="false" signature="0:35" ph="import ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,8 +49,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+            <state relative-caret-position="333">
+              <caret line="35" column="120" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -52,18 +59,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_landing.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_landing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="179" selection-start-line="93" selection-start-column="179" selection-end-line="93" selection-end-column="179" />
               <folding />
             </state>
           </provider>
@@ -72,8 +69,8 @@
       <file leaf-file-name="base_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+            <state relative-caret-position="362">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,7 +79,7 @@
       <file leaf-file-name="base_category.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-721">
               <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
               <folding />
             </state>
@@ -92,8 +89,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/templates/posts/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="272">
+              <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -102,29 +99,43 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="389">
+              <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/templates/posts/registration_form.html">
+      <file leaf-file-name="truncator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/static/posts/js/truncator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            <state relative-caret-position="714">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_visitor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_visitor.html">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/templates/posts/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="9" column="114" selection-start-line="9" selection-start-column="114" selection-end-line="9" selection-end-column="114" />
+              <folding>
+                <marker date="1472723044687" expanded="false" signature="1073:1102" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/templates/posts/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="63" column="84" selection-start-line="63" selection-start-column="84" selection-end-line="63" selection-end-column="84" />
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#span#4;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/userprofile/models.py" />
         <option value="$PROJECT_DIR$/userprofile/templates/userprofile/update_profile.html" />
         <option value="$PROJECT_DIR$/posts/migrations/0017_userprofile.py" />
         <option value="$PROJECT_DIR$/posts/forms.py" />
@@ -174,27 +184,28 @@
         <option value="$PROJECT_DIR$/posts/templates/posts/base_category.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/base_visitor.html" />
         <option value="$PROJECT_DIR$/posts/static/posts/js/truncator.js" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/about.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/categories_list.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/dashboard.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/category_detail.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/detail.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/goodbye.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/registration_form.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/search.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/update_post.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/welcome.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/base_detail.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/your_posts.html" />
         <option value="$PROJECT_DIR$/userprofile/templates/userprofile/your_profile.html" />
         <option value="$PROJECT_DIR$/userprofile/forms.py" />
         <option value="$PROJECT_DIR$/posts/views.py" />
         <option value="$PROJECT_DIR$/posts/templates/posts/upvote.html" />
         <option value="$PROJECT_DIR$/posts/templates/posts/down_vote.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/index.html" />
-        <option value="$PROJECT_DIR$/posts/templates/posts/home.html" />
-        <option value="$PROJECT_DIR$/posts/static/posts/style.css" />
         <option value="$PROJECT_DIR$/posts/templates/posts/base_landing.html" />
+        <option value="$PROJECT_DIR$/static/posts/style.css" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/index.html" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/detail.html" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/about.html" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/home.html" />
+        <option value="$PROJECT_DIR$/posts/templates/posts/base_detail.html" />
+        <option value="$PROJECT_DIR$/posts/static/posts/style.css" />
         <option value="$PROJECT_DIR$/posts/templates/posts/base.html" />
       </list>
     </option>
@@ -646,14 +657,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/userprofile/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wiwik/settings_old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -743,14 +746,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/static/posts/js/truncator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/add_comment_to_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -780,16 +775,6 @@
         <state relative-caret-position="17">
           <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <marker date="1472667299524" expanded="false" signature="1032:1061" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -889,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/your_posts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -950,20 +927,9 @@
         <state relative-caret-position="136">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
             <marker date="1472672895762" expanded="true" signature="98:180" ph="..." />
             <marker date="1472672895762" expanded="true" signature="115:180" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-            <marker date="1472673286701" expanded="false" signature="0:35" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -992,22 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/registration_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1032,34 +982,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_detail.html">
+    <entry file="file://$PROJECT_DIR$/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        <state relative-caret-position="211">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="114" selection-start-line="9" selection-start-column="114" selection-end-line="9" selection-end-column="114" />
+          <folding>
+            <marker date="1472723044687" expanded="false" signature="1073:1102" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/static/posts/js/truncator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-721">
           <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="84" selection-start-line="63" selection-start-column="84" selection-end-line="63" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#span#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/base_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="35" column="120" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/templates/posts/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+            <marker date="1472673286701" expanded="false" signature="0:35" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/posts/templates/posts/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+        <state relative-caret-position="1581">
+          <caret line="93" column="179" selection-start-line="93" selection-start-column="179" selection-end-line="93" selection-end-column="179" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="389">
+          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
         </state>
       </provider>
