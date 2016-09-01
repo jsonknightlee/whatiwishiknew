@@ -155,6 +155,8 @@ top: 50px;
 float: right;
 text-align: center;
 font-family: 'Amethysta', sans-serif;
+float: right;
+height: 100%;
 
 }
 
@@ -241,8 +243,7 @@ margin-top: 100px;
 
 .right{
 
-float: right;
-height: 100%;
+
 
 }
 
@@ -350,6 +351,21 @@ font-family: 'Belgrano', sans-serif;
 h1{
 
 font-family: 'Helvetica Neue Regular', serif;
+
+}
+
+.right-bar{
+
+position: fixed;
+padding-bottom: 100px;
+height: auto;
+width: 290px;
+right: 200px;
+top: 250px;
+float: right;
+text-align: center;
+float: right;
+height: 100%;
 
 }
 

@@ -3,8 +3,11 @@
 
 {% block body %}
 
+
+
 <div class="main-detail">
     <div class="content">
+
 <h1>{{ post.post_title }}</h1>
 
     <h3><strong>Posted by : </strong><span class="author"><strong>{{ post.user.first_name}}&nbsp;{{ post.user.last_name}}</strong></span></h3>
@@ -20,6 +23,7 @@
         <div><p>{{ post.post_body|safe }}</p></div>
         <div class="yowzer">
         <br/>
+
             {% if user.is_authenticated %}
         <a class="btn btn-primary" href="{% url 'posts:add_comment_to_post' pk=post.pk %}">Add comment</a>
             {% else %}
@@ -32,7 +36,7 @@
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
 
-                <h4><strong>{{ comment.author_comments}}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+                <h4 class="author"><strong>{{ comment.author_comments}}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
             <div class="date">
            {% if request.user.is_superuser %}
           {% if not comment.approved_comment %}
@@ -51,6 +55,13 @@
     {% endfor %}
     </div>
 
-
+      <div class="right-bar">
+                    <span class="st_twitter_large" displayText="Tweet"></span><br/>
+                    <span class="st_facebook_large" displayText="Facebook"></span><br/>
+                    <span class="st_linkedin_large" displayText="LinkedIn"></span><br/>
+                    <span class="st_googleplus_large" displayText="Google+"></span><br/>
+                    <span class="st_email_large" displayText="Email"></span><br/>
+                    <span class="st_sharethis_large" displayText="ShareThis"></span>
+             </div>
 
 {% endblock %}
