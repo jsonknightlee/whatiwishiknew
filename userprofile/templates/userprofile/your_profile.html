@@ -15,18 +15,18 @@
                         <h1>Your Profile: {{ user.username }}</h1>
                         <h4>Bio:</h4>
                         <h5>{{ user.userprofile.bio }}</h5>
-                        <h4>Your Profile Picture: </h4>
+                        <h4 class="author">Your Profile Picture: </h4>
                         {% if user.userprofile.avatar.url %}
                         <img class="img-responsive" src="{{ user.userprofile.avatar.url }}" alt="{{ user.username }}" />
                         {% else %}
                         <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ user.username }}"/>
                         {% endif %}
                     <br/>
-                    <h4>Name:</h4>
+                    <h4 class="author">Name:</h4>
                     <h5>{{ user.first_name }}</h5>
-                    <h4>Last Name:</h4>
+                    <h4 class="author">Last Name:</h4>
                     <h5>{{ user.last_name }}</h5>
-                    <h4>Email:</h4>
+                    <h4 class="author">Email:</h4>
                     <h5>{{ user.email }}</h5>
                     <div>
                     <a href="{% url 'userprofile:update' %}">Update Your Profile</a> &nbsp;| &nbsp;

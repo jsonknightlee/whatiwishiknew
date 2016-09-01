@@ -10,7 +10,7 @@
 
     <h1>Posts you have created: {{ user.username }}</h1>
         {% for post in all_posts %}
-            <a href="{% url 'posts:detail' pk=post.pk %}"><h4>{{ post.post_title }}</h4></a>
+            <a href="{% url 'posts:detail' pk=post.pk %}"><h4 class="author">{{ post.post_title }}</h4></a>
             <a href="{% url 'posts:post_update' pk=post.pk %}">Edit Post</a> |
             <form action="{% url 'posts:post_delete' post.id %}" method="post" style="display: inline; left: 300px;">
             {% csrf_token %}

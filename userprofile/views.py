@@ -79,8 +79,8 @@ def user_profile(request):
     return render(request, HttpResponse("Hello biatches"))
 
 '''
-def home(request, username):
-    profile = User.objects.get(username=username)
+def home(request, pk):
+    profile = User.objects.get(pk=pk)
     context = {'profile': profile, }
     return render(request, 'userprofile/home.html', context)
 '''
