@@ -53,6 +53,38 @@ margin-left: 450px;
     color: #ffffff;
 }
 
+.welcome{
+    color: #D3D3D3;
+    font-size: 16px;
+}
+
+.main-welcome{
+
+position: absolute;
+height: 300px;
+width:700px;
+top: 10%;
+left: 40%;
+margin: -250px 50px 0 -200px;
+margin-top: 10px;
+padding-bottom: 50px;
+background-color: #ffffff;
+
+}
+
+.center{
+margin-left:200px;
+}
+
+.content-welcome{
+position:relative;
+width: 650px;
+left:20px;
+top: 20px;
+margin-top: 200px;
+font-family: 'Belgrano', sans-serif;
+}
+
 button.blab {
      background:none;
      border:none;

@@ -81,18 +81,26 @@
                  <li class="">
                     <a href="{% url 'userprofile:your_profile' %}">
                         {% if user.userprofile.avatar.url %}
-                        <span><img class="thumb" src="{{ user.userprofile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        <span><img class="thumb" src="{{ user.userprofile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% else %}
-                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% endif %}
                     </a>
                 </li>
                 {% else %}
+                {% if request.session.session_key %}
                  <li class="">
                     <a href="{% url 'posts:login_user' %}">
                         <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor {{ request.session.session_key|truncatechars:7 }}</span>
                     </a>
                 </li>
+                {% else %}
+                 <li class="">
+                    <a href="{% url 'posts:login_user' %}">
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor</span>
+                    </a>
+                </li>
+                    {% endif %}
                 {% endif %}
                 <li class="">
                     <a href="{% url 'posts:about' %}">

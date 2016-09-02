@@ -2,7 +2,6 @@ from django.shortcuts import render_to_response
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from .models import Post, Comment, Categories
 from django.core.urlresolvers import reverse_lazy
-# User Forms
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.views.generic import View
@@ -10,14 +9,13 @@ from .forms import UserForm, CommentForm, PostForm
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseForbidden, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.views import generic
 from django.db.models import Q
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib.auth import logout
 from django.views.decorators.cache import cache_control
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.template import RequestContext
 
 
@@ -50,8 +48,6 @@ class IndexView(ListView):
 class Details(DetailView):
     model = Post
     template_name = 'posts/detail.html'
-
-
 
 
 class PostUpdate(UpdateView):
@@ -126,33 +122,6 @@ def post_create(request):
         }
     return render(request, 'posts/post_form.html', context)
 
-'''
-def post_update(request):
-    if not request.user.is_authenticated():
-        return render(request, 'posts/login_user.html')
-    else:
-        form = PostForm(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.user = request.user
-            post.image = request.FILES['image']
-            file_type = post.image.url.split('.')[-1]
-            file_type = file_type.lower()
-            if file_type not in IMAGE_FILE_TYPES:
-                context = {
-                    'post': post,
-                    'form': form,
-                    'error_message': 'Image file must be PNG, JPG, or JPEG',
-                }
-                return render(request, 'posts/update_post.html', context)
-            post.save()
-            return render(request, 'posts/detail.html', {'post': post})
-        context = {
-            "form": form,
-        }
-    return render(request, 'posts/update_post.html', context)
-'''
-
 
 def welcome(request):
     user = User.objects.filter(user=request.user)
@@ -204,16 +173,6 @@ class UserFormView(View):
                     #  request.user.username
                     return redirect('posts:index')
         return render(request, 'posts/login_user.html', {'form': form})
-
-'''
-@cache_control(no_cache=True, must_revalidate=True, no_store=True)
-def logout_user(request):
-    form = UserForm(request.POST or None)
-    context = {
-        "form": form,
-    }
-    return render(request, 'posts/login_user.html', context)
-'''
 
 
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
@@ -295,13 +254,6 @@ def search(request):
 def about(request):
     return render(request, 'posts/about.html')
 
-'''
-def your_posts(request, pk):
-    profile_posts = Post.objects.filter(pk=pk)
-    display = {'go': profile_posts}
-    return render(request, 'posts/your_posts.html', display)
-'''
-
 
 class YourPosts(generic.ListView):
     template_name = 'posts/your_posts.html'
@@ -310,17 +262,6 @@ class YourPosts(generic.ListView):
     def get_queryset(self):
         return Post.objects.filter(user=self.request.user).order_by('-post_date')
 
-
-# Sessions
-
-
-'''
-def view_user(request, user):
-    posts = Post.objects.get(user=user)
-    profile = User.objects.get()
-    context = {'posts': posts, 'profile': profile}
-    return render(request, 'posts/view_user.html', context)
-'''
 # Error Pages
 
 
@@ -343,7 +284,3 @@ def handler400(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
-
-
-# Logo
-

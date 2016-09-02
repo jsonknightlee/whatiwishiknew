@@ -28,8 +28,4 @@ urlpatterns = [
     url(r'^error400/$', views.handler404, name='four_four'),
     url(r'^error400/$', views.handler500, name='five'),
 
-    # url(r'^view_posts/(?P<pk>[0-9]+)/$', views.view_user, name='view_user'),
-
-
-
 ]
