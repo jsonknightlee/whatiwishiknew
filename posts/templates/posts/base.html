@@ -32,6 +32,12 @@
       $('.test').truncate({max_length: 100});
     });
     </script>
+    <script>
+     $(".nav a").on("click", function(){
+       $(".nav").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+     });
+    </script>
 
 </head>
 <body>
@@ -58,7 +64,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="">
+                    <a>
                         <span class="gap" aria-hidden="true"></span>&nbsp;
                     </a>
                 </li>
@@ -97,7 +103,7 @@
                 {% else %}
                  <li class="">
                     <a href="{% url 'posts:login_user' %}">
-                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor</span>
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor </span>
                     </a>
                 </li>
                     {% endif %}
