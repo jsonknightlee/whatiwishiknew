@@ -52,6 +52,8 @@ class Details(DetailView):
     template_name = 'posts/detail.html'
 
 
+
+
 class PostUpdate(UpdateView):
     model = Post
     fields = [
