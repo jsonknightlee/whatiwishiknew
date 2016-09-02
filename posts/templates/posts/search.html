@@ -1,15 +1,16 @@
 {% extends 'posts/base.html' %}
 {% block title %} Wiwik | Search {% endblock %}
+{% load django_markdown %}
 
 {% block body %}
 
 <div class="main-search">
+    {% if queryset_list %}
  {% for post in queryset_list %}
-
     <div class="content">
 
         <h1 class="fof"><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title }}</a> </h1>
-            <p><strong> Posted by </strong> <span class="idex"><strong>{{ post.user }}</strong> </span> <strong>in</strong> <span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
+            <p><strong> Posted by </strong> <span class="idex"><strong>{{ post.user.first_name }}&nbsp;{{ post.user.last_name }}</strong> </span> <strong>in</strong> <span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
                  <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
                             <img src="{{ post.image.url }}" class="img-responsive">
@@ -18,17 +19,53 @@
                         {% endif %}
                 </a>
                 <br/>
-            <div><h5>{{ post.post_body }}</h5></div>
+            <div><h5>{{ post.post_body|markdown }}</h5></div>
 
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
                 <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
-                <a href="{% url 'posts:detail' pk=post.pk %}">Comments {{ post.comments.count }}</a>
+                <button class="blab" data-toggle="collapse" data-target="#comm" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
                 <br/>
 
+        <div id="comm" class="collapse">
+        <br/>
+            {% if user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'posts:add_comment_to_post' pk=post.pk %}">Add comment</a>
+            {% else %}
+        <a class="btn btn-primary" href="">Add comment</a>
+            <br/>
+            <p>Please login to post a comment.</p>
+            {% endif %}
+        <br/>
+            <br/>
+            {% for comment in post.comments.all reversed %}
+            {% if user.is_authenticated or comment.approved_comment %}
+
+                <h4 class="author"><strong>{{ comment.author_comments.first_name}}&nbsp;{{ comment.author_comments.last_name}}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+            <div class="date">
+           {% if request.user.is_superuser %}
+          {% if not comment.approved_comment %}
+                <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="btn btn-default" href="{% url 'posts:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+            {% endif %}
+                {% else %}
+                {% endif %}
         </div>
+            <p><span class="text">{{ comment.text|linebreaks }}</span></p><br/>
+
+             {% endif %}
+            {% endfor %}
+             </div>
+
+        </div>
+    <br/>
+    <br/>
 
 {% endfor %}
+    {% else %}
+    <h5 class="search-term">No results found. Try Another Search...</h5>
+    {% endif %}
+
     {% if error_message %}
     <h5 class="error"><strong>{{ error_message }}</strong></h5>
     {% endif %}
