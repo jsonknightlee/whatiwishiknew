@@ -21,7 +21,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.template import RequestContext
 
 
-IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
+IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg', 'mp4', 'mov']
 
 
 # Create the Main page List of wiwiks
@@ -341,4 +341,6 @@ def handler400(request):
     response.status_code = 500
     return response
 
+
+# Logo
 

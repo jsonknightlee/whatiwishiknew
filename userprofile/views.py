@@ -32,8 +32,8 @@ def update_profile(request):
                 }
                 return render(request, 'userprofile/update_profile.html', context)
             profile.save()
-            context_prof = {'profile': profile}
-            return render(request, 'userprofile/your_profile.html', context_prof)
+            context = {'profile': profile}
+            return render(request, 'userprofile/your_profile.html', context)
         return render(request, 'userprofile/update_profile.html', {'form': form})
 
 
