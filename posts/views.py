@@ -21,7 +21,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.template import RequestContext
 
 
-IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg', 'mp4', 'mov']
+IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 
 
 # Create the Main page List of wiwiks
