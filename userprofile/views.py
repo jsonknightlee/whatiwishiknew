@@ -4,35 +4,11 @@ from django.http import HttpResponse
 from django.template.context_processors import csrf
 from .forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
-from django.views import generic
+from django.views.generic import View
 from .models import UserProfile, User
 
 
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
-
-'''
-@login_required
-def user_profile(request):
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST or None, request.Files or None, instance=request.user.profile)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('userprofile/home.html')
-        else:
-            user = request.user
-            profile = user.profile
-            form = UserProfileForm(instance=profile)
-
-            args = {}
-            args.update(csrf(request))  # Add cross site forgery here
-
-            args['form'] = form
-
-        return render_to_response('userprofile/update_profile.html', args)
-    return render(request, 'userprofile/update_profile.html')
-
-
-'''
 
 
 @login_required()
@@ -56,14 +32,9 @@ def update_profile(request):
                 }
                 return render(request, 'userprofile/update_profile.html', context)
             profile.save()
-            context_prof = {
-                "profile": profile,
-            }
+            context_prof = {'profile': profile}
             return render(request, 'userprofile/your_profile.html', context_prof)
         return render(request, 'userprofile/update_profile.html', {'form': form})
-
-
-
 
 
 @login_required()

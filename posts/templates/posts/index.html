@@ -65,7 +65,7 @@
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
 
-                <h4><strong>{{ comment.author_comments}}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+                <h4 class="author"><strong>{{ comment.author_comments.first_name}}&nbsp;{{ comment.author_comments.last_name}}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
             <div class="date">
            {% if request.user.is_superuser %}
           {% if not comment.approved_comment %}
