@@ -219,6 +219,7 @@ def logout_user(request):
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def logout_user(request):
     logout(request)
+    request.session.flush()
     return render(request, 'posts/goodbye.html')
 
 
