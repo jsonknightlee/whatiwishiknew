@@ -104,7 +104,7 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['static/posts/templates'],
+        'DIRS': ['posts/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
