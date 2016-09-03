@@ -265,6 +265,9 @@ margin-top: 100px;
 }
 
 .post-thumb{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     border-radius: 25%;
     width: auto;
     height: auto;
