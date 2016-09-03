@@ -273,7 +273,7 @@ margin-top: 100px;
 
 }
 
-.cover-thumb{
+.post-thumb.cover-thumb{
     border-radius: 50%;
     width: auto;
     height: auto;
