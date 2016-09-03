@@ -206,7 +206,7 @@ def upvote(request, post_id):
         p.upvote += 1
         p.save()
         return render_to_response("posts/upvote.html", {'post_id': post_id, 'type': 'upvote',
-                                                        'post': p, 'user': request.user})
+                                                    'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
@@ -231,6 +231,13 @@ class CategoriesIndex(ListView):
 class CategoriesDetail(DetailView):
     model = Categories
     template_name = 'posts/category_detail.html'
+
+
+# Users
+
+class UsersDetail(DetailView):
+    model = User
+    template_name = 'posts/view_user.html'
 
 
 # Search Navigation
@@ -284,3 +291,9 @@ def handler400(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
+
+
+def view_user(request, user):
+    post = Post.objects.filter(user=user)
+    viewit = {'post': post}
+    return render(request, 'posts/view_user.html', viewit)

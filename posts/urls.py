@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^error400/$', views.handler400, name='four'),
     url(r'^error400/$', views.handler404, name='four_four'),
     url(r'^error400/$', views.handler500, name='five'),
+    url(r'^view_user/(?P<pk>[0-9]+)/$', views.UsersDetail.as_view(), name='view_user'),
 
 ]
