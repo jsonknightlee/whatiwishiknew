@@ -165,8 +165,13 @@ left: 300px;
 .quote{
 
 font-family: 'Belgrano', sans-serif;
-color: #792f25;
+color: #AA0114;
+opacity: 0.5;
 
+}
+
+.names{
+color: #000000;
 }
 
 .cursive{
