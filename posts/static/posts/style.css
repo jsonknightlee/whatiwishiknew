@@ -256,29 +256,21 @@ margin-top: 100px;
 }
 
 .thumb{
-    border-radius: 50%;
+    border-radius: 30%;
     width: auto;
     height: auto;
-    max-width: 23px;
+    max-width: 28px;
     max-height: 28px
 
 }
 
 .post-thumb{
-    border-radius: 50%;
+    border-radius: 30%;
     width: auto;
     height: auto;
     max-width: 40px;
     max-height: 40px;
 
-}
-
-.post-thumb.cover-thumb{
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-    max-width: 38px;
-    max-height: 38px;
 }
 
 .dash{
