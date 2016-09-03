@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc4ab4e1-2137-4196-8b71-678b2d9b37c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/posts/style.css" afterPath="$PROJECT_DIR$/posts/static/posts/style.css" />
     </list>
     <ignored path="wiwik.iws" />
@@ -54,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="172" column="6" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
+              <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -1011,7 +1010,7 @@
     <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="172" column="6" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
+          <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
           <folding />
         </state>
       </provider>
