@@ -1,13 +1,6 @@
 from django.conf.urls import url
 from . import views
-from django.contrib.sitemaps.views import sitemap
-from .models import Post
-from django.contrib.sitemaps import GenericSitemap
 
-info_dict = {
-    'queryset': Post.objects.all(),
-    'date_field': 'pub_date',
-}
 
 app_name = 'posts'
 
@@ -35,6 +28,5 @@ urlpatterns = [
     url(r'^error400/$', views.handler400, name='four'),
     url(r'^error400/$', views.handler404, name='four_four'),
     url(r'^error400/$', views.handler500, name='five'),
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'posts': GenericSitemap(info_dict, priority=0.6)}}, name='django.contrib.sitemaps.views.sitemap')
 
 ]
