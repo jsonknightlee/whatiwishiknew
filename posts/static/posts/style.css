@@ -265,11 +265,11 @@ margin-top: 100px;
 }
 
 .post-thumb{
-    border-radius: 40%;
+    border-radius: 35%;
     width: auto;
     height: auto;
-    max-width: 60px;
-    max-height: 40px
+    max-width: 50px;
+    max-height: 50px
 
 }
 
