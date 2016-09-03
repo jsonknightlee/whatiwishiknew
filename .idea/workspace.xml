@@ -124,8 +124,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="269" column="17" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="17" />
+            <state relative-caret-position="467">
+              <caret line="280" column="21" selection-start-line="280" selection-start-column="21" selection-end-line="280" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1079,8 +1079,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="269" column="17" selection-start-line="269" selection-start-column="17" selection-end-line="269" selection-end-column="17" />
+        <state relative-caret-position="467">
+          <caret line="280" column="21" selection-start-line="280" selection-start-column="21" selection-end-line="280" selection-end-column="21" />
           <folding />
         </state>
       </provider>
