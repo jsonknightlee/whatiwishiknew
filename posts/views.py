@@ -208,7 +208,7 @@ def upvote(request, post_id):
         return render_to_response("posts/upvote.html", {'post_id': post_id, 'type': 'upvote',
                                                         'post': p, 'user': request.user})
     else:
-        return HttpResponseRedirect('/login/?next=%s' % request.path)
+        return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
 
 def down_vote(request, post_id):
@@ -219,7 +219,7 @@ def down_vote(request, post_id):
         return render_to_response("posts/down_vote.html", {'post_id': post_id, 'type': 'down_vote',
                                                            'post': p, 'user': request.user})
     else:
-        return HttpResponseRedirect('/login/?next=%s' % request.path)
+        return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
 
 # Categories
