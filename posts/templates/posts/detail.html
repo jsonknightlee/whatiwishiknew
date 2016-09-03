@@ -10,7 +10,7 @@
 
 <h1 class="fof">{{ post.post_title }}</h1>
 
-    <h3><strong>Posted by : </strong><span class="author"><strong>{{ post.user.first_name}}&nbsp;{{ post.user.last_name}}</strong></span></h3>
+    <h3><strong>Posted by : </strong><span class="author"><strong>{{ post.user.username }}</strong></span></h3>
     <h5 class="tiny"><strong>{{ post.post_date }}</strong></h5>
         <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
@@ -38,7 +38,7 @@
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
 
-                <h4 class="author"><strong>{{ comment.author_comments.first_name }}&nbsp;{{ comment.author_comments.last_name }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+                <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
             <div class="date">
            {% if request.user.is_superuser %}
           {% if not comment.approved_comment %}
