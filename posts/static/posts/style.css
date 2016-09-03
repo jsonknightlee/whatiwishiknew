@@ -165,8 +165,9 @@ left: 300px;
 .quote{
 
 font-family: 'Belgrano', sans-serif;
-color: #AA0114;
-opacity: 0.5;
+color: #CE3D2B;
+color: rgba(0,0,0,0.5);
+
 
 }
 
