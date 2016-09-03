@@ -10,7 +10,7 @@
 
 <h1 class="fof">{{ post.post_title }}</h1>
 
-    <h3><strong>Posted by : </strong><span class="author"><img src="{{post.user.userprofile.avatar.url}}" class="post-thumb"/><strong>{{ post.user.username }}</strong></span></h3>
+    <h3><strong>Posted by : </strong><span class="author"><img src="{{post.user.userprofile.avatar.url}}" class="post-thumb cover-thumb"/><strong>{{ post.user.username }}</strong></span></h3>
     <h5 class="tiny"><strong>{{ post.post_date }}</strong></h5>
         <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
