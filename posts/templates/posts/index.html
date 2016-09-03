@@ -33,7 +33,7 @@
     <div class="content">
 
         <h1 class="fof"><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title}}</a> </h1>
-            <p><strong> Posted by </strong> <span class="idex"><img src="{{post.user.userprofile.avatar.url}}" class="thumb"/><a href="{% url 'posts:view_user' pk=post.user.pk %}"> <strong>{{ post.user.username }}</strong></a> </span> <br/><span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
+            <p><strong> Posted by </strong> <span class="idex"><img src="{{post.user.userprofile.avatar.url}}" class="thumb"/> <strong>{{ post.user.username }}</strong> </span> <br/><span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
                  <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
                             <img src="{{ post.image.url }}" class="img-responsive">
