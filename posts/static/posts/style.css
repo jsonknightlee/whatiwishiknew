@@ -256,20 +256,20 @@ margin-top: 100px;
 }
 
 .thumb{
-    border-radius: 40%;
+    border-radius: 50%;
     width: auto;
     height: auto;
     max-width: 28px;
-    max-height: 21px
+    max-height: 28px
 
 }
 
 .post-thumb{
-    border-radius: 35%;
+    border-radius: 50%;
     width: auto;
     height: auto;
-    max-width: 50px;
-    max-height: 50px
+    max-width: 40px;
+    max-height: 40px
 
 }
 
