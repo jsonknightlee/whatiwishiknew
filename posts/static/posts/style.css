@@ -72,12 +72,6 @@ background-color: #ffffff;
 
 }
 
-.navbar-default .navbar-nav > .active > a,
- .navbar-default .navbar-nav > .active > a:hover,
- .navbar-default .navbar-nav > .active > a:focus {
-      color: #000;
-      background: #d65c14;
- }
 
 .search_term{
     padding-left: 20px;
@@ -169,8 +163,10 @@ left: 300px;
 }
 
 .quote{
+
 font-family: 'Belgrano', sans-serif;
 color: #D3D3D3;
+
 }
 
 .cursive{
@@ -286,7 +282,6 @@ margin-top: 100px;
 }
 
 .right{
-
 
 
 }
@@ -439,7 +434,8 @@ color: gray
 
 }
 
-comm{
+
+.comm{
 
 left: 10%;
 
