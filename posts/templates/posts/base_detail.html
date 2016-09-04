@@ -90,8 +90,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </li>
                 {% if user.is_authenticated %}
                  <li class="">
-                    <a href="{% url 'profile:your_profile' %}">
-                        {% if user.userprofile.avatar.url %}
+                    <a href="{% url 'userprofile:your_profile' %}">
+                        {% if user.profile.avatar.url %}
                         <span><img class="thumb" src="{{ user.profile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% else %}
                         <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>

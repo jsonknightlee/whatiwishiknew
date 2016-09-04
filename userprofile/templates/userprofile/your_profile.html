@@ -14,10 +14,10 @@
                         {% csrf_token %}
                         <h1 class="fof">Your Profile: {{ user.username }}</h1>
                         <h4>Bio:</h4>
-                        <h5>{{ user.userprofile.bio }}</h5>
+                        <h5>{{ user.profile.bio }}</h5>
                         <h4 class="author">Your Profile Picture: </h4>
-                        {% if user.userprofile.avatar.url %}
-                        <img class="img-responsive" src="{{ user.userprofile.avatar.url }}" alt="{{ user.username }}" />
+                        {% if user.profile.avatar.url %}
+                        <img class="img-responsive" src="{{ user.profile.avatar.url }}" alt="{{ user.username }}" />
                         {% else %}
                         <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ user.username }}"/>
                         {% endif %}
