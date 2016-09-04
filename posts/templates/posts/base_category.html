@@ -70,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </li>
                  <li class="">
                     <a href="{% url 'userprofile:your_profile' %}">
-                        <span><img class="thumb" src="{{ user.userprofile.avatar.url }}"></span>&nbsp; {{user.first_name}}&nbsp;{{user.last_name}}
+                        <span><img class="thumb" src="{{ user.profile.avatar.url }}"></span>&nbsp; {{user.first_name}}&nbsp;{{user.last_name}}
                     </a>
                 </li>
                 <li class="">
