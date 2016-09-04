@@ -22,7 +22,7 @@ class Categories(models.Model):
 class Post(models.Model):
     user = models.ForeignKey(User, default=1)
     post_title = models.CharField(max_length=250)
-    post_body = models.TextField(max_length=10000)
+    post_body = models.CharField(max_length=10000)
     category = models.ForeignKey(Categories, related_name='hats')
     image = models.FileField(default='', null=True)
     email = models.EmailField(default='')
