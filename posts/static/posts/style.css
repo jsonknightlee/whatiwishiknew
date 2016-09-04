@@ -153,8 +153,8 @@ font-size: 16px;
 }
 
 .biography{
-color: #A9A9A9;
-font-size: 12px;
+color: #000000;
+font-size: 14px;
 opacity: 0.5;
 filter: alpha(opacity=50);
 }
@@ -472,7 +472,7 @@ color: #1fbed6;
 
 .idex{
 
-font-size: 16px;
+font-size: 14px;
 color: #1fbed6;
 }
 
