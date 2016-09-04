@@ -152,6 +152,13 @@ color: #C0C0C0;
 font-size: 16px;
 }
 
+.biography{
+color: #A9A9A9;
+font-size: 12px;
+opacity: 0.5;
+filter: alpha(opacity=50);
+}
+
 .login{
 
 margin-top: 100px;
