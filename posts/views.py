@@ -232,18 +232,6 @@ class CategoriesDetail(DetailView):
     model = Categories
     template_name = 'posts/category_detail.html'
 
-'''
-# Users
-
-class UsersDetail(DetailView):
-    # model = User
-    template_name = 'posts/view_user.html'
-    # context_object_name = 'post'
-
-    def get_object(self):
-        win = request.session['user_id']
-        return get_object_or_404(User, pk=request.session['user_id'])
-'''
 
 # Search Navigation
 

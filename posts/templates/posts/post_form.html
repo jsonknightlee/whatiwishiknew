@@ -10,9 +10,9 @@
             <div class="panel panel-default makePost">
                 <div class="panel-body">
                     <h2> Create A Post: </h2>
-                    <form class="form_horizontal" action="" method="post" enctype="multipart/form-data">
+                    <form class="form_horizontal" action="" method="post" enctype="multipart/form-data" >
                         {% csrf_token %}
-                        {% include 'posts/form_template.html' %}
+                       {% include 'posts/form_template.html' %}
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary">Post</button>

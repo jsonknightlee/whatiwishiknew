@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django import forms
 from .forms import User
-from .models import Comment, Post
+from .models import Comment, Post, Categories
 from django.core.files.images import get_image_dimensions
 
 
@@ -10,14 +10,14 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'password']
+        fields = ['username', 'email', 'first_name', 'last_name', 'password', ]
 
 
 class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ['text',  'created_at']
+        fields = ['text',  'created_at', ]
 
 
 class PostForm(forms.ModelForm):
@@ -31,6 +31,8 @@ class PostForm(forms.ModelForm):
             "image",
             "post_date",
         ]
+
+
 
 
 class UpdateForm(forms.ModelForm):
