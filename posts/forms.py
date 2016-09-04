@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django import forms
 from .forms import User
 from .models import Comment, Post, Categories
-from django_markdown.widgets import MarkdownWidget
 
 
 class UserForm(forms.ModelForm):
@@ -21,8 +20,6 @@ class CommentForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
-
-    post_body = forms.CharField(widget=MarkdownWidget(), max_length=10000)
 
     class Meta:
         model = Post

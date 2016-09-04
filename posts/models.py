@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from django_markdown.models import MarkdownField
 
 import datetime
 from django.conf import settings
@@ -30,6 +31,8 @@ class Post(models.Model):
     upvote = models.IntegerField(default=0)
     down_vote = models.IntegerField(default=0)
 
+
+
     def get_absolute_url(self):
         return reverse('posts:detail', kwargs={'pk': self.pk})
 
@@ -48,10 +51,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
-
-
-
-
-
-
-
