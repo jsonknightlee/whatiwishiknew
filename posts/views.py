@@ -104,19 +104,22 @@ def post_create(request):
         form = PostForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             post = form.save(commit=False)
-            post.user = request.user
-            post.image = request.FILES['image']
-            file_type = post.image.url.split('.')[-1]
-            file_type = file_type.lower()
-            if file_type not in IMAGE_FILE_TYPES:
-                context = {
-                    'post': post,
-                    'form': form,
-                    'error_message': 'Image file must be PNG, JPG, or JPEG',
-                }
-                return render(request, 'posts/post_form.html', context)
-            post.save()
-            return render(request, 'posts/detail.html', {'post': post})
+            if not post.image:
+                post.user = request.user
+                post.image = request.FILES['image']
+                file_type = post.image.url.split('.')[-1]
+                file_type = file_type.lower()
+                if file_type not in IMAGE_FILE_TYPES:
+                    context = {
+                        'post': post,
+                        'form': form,
+                        'error_message': 'Image file must be PNG, JPG, or JPEG',
+                    }
+                    return render(request, 'posts/post_form.html', context)
+            else:
+                post.image = None
+                post.save()
+                return render(request, 'posts/detail.html', {'post': post})
         context = {
             "form": form,
         }
@@ -205,7 +208,7 @@ def upvote(request, post_id):
         p = get_object_or_404(Post, pk=post_id)
         p.upvote += 1
         p.save()
-        return render_to_response("posts/upvote.html", {'post_id': post_id, 'type': 'upvote',
+        return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'upvote',
                                                     'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)

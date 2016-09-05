@@ -11,6 +11,11 @@
     <h1 class="fof">Posts you have created: {{ user.username }}</h1>
         {% for post in all_posts %}
             <a href="{% url 'posts:detail' pk=post.pk %}"><h4 class="author">{{ post.post_title }}</h4></a>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" class="thumbnail"/>
+            {% else %}
+            <img src="" alt="No image" class="thumbnail"/>
+            {% endif %}
             <a href="{% url 'posts:post_update' pk=post.pk %}">Edit Post</a> |
             <form action="{% url 'posts:post_delete' post.id %}" method="post" style="display: inline; left: 300px;">
             {% csrf_token %}

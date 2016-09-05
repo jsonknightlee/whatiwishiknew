@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         {% if user.profile.avatar.url %}
                         <span><img class="thumb" alt="avatar-thumb" src="{{ user.profile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% else %}
-                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
+                        <span><img class="thumb" src="{{ '/images/placeholder.jpg/' }}" ></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% endif %}
                     </a>
                 </li>

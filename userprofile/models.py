@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, primary_key=True, related_name='profile')
-    bio = models.TextField(max_length=100, null=True, blank=True)
-    avatar = models.FileField(default='static/placeholder.jpg', null=True, blank=False)
+    bio = models.TextField(default='user biography', max_length=100, blank=True)
+    avatar = models.FileField(default='static/placeholder.jpg', blank=True)
 
     def __unicode__(self):
         return self.user.username

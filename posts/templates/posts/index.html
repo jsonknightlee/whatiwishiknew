@@ -37,9 +37,9 @@
 
                  <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
-                            <img src="{{ post.image.url }}" class="img-responsive">
+                            <img src="{{ post.image.url }}" class="img-responsive"/>
                         {% else %}
-                            <p>no image for post.</p>
+
                         {% endif %}
                 </a>
                 <br/>

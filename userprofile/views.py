@@ -20,18 +20,20 @@ def update_profile(request):
         '{% csrf_token %}'
         if form.is_valid():
             profile = form.save(commit=False)
-            profile.user = request.user
-            profile.avatar = request.FILES['avatar']
-            file_type = profile.avatar.url.split('.')[-1]
-            file_type = file_type.lower()
-            if file_type not in IMAGE_FILE_TYPES:
-                context = {
-                    'profile': profile,
-                    'form': form,
-                    'error_message': 'Image file must be PNG, JPG, or JPEG',
-                }
+            if not profile.avatar:
+                profile.user = request.user
+                profile.avatar = request.FILES['avatar']
+                file_type = profile.avatar.url.split('.')[-1]
+                file_type = file_type.lower()
+                if file_type not in IMAGE_FILE_TYPES:
+                    context = {
+                        'profile': profile,
+                        'form': form,
+                        'error_message': 'Image file must be PNG, JPG, or JPEG',
+                    }
                 return render(request, 'userprofile/update_profile.html', context)
-            profile.save()
+            else:
+                profile.save()
             context = {'profile': profile}
             return render(request, 'userprofile/your_profile.html', context)
         return render(request, 'userprofile/update_profile.html', {'form': form})

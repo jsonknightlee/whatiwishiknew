@@ -23,15 +23,13 @@ class Categories(models.Model):
 class Post(models.Model):
     user = models.ForeignKey(User, default=1)
     post_title = models.CharField(max_length=250)
-    post_body = models.CharField(max_length=10000)
+    post_body = models.TextField(max_length=10000)
     category = models.ForeignKey(Categories, related_name='hats')
-    image = models.FileField(default='', null=True)
+    image = models.FileField(default='static/placeholder.jpg', blank=True, null=True)
     email = models.EmailField(default='')
     post_date = models.DateTimeField(default=now)
     upvote = models.IntegerField(default=0)
     down_vote = models.IntegerField(default=0)
-
-
 
     def get_absolute_url(self):
         return reverse('posts:detail', kwargs={'pk': self.pk})
