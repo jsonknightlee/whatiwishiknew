@@ -30,6 +30,7 @@ class Post(models.Model):
     post_date = models.DateTimeField(default=now)
     upvote = models.IntegerField(default=0)
     down_vote = models.IntegerField(default=0)
+    has_voted = models.BooleanField(default=False)
 
     def get_absolute_url(self):
         return reverse('posts:detail', kwargs={'pk': self.pk})

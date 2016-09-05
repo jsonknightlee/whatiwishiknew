@@ -9,7 +9,7 @@ from .forms import UserForm, CommentForm, PostForm
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.views import generic
 from django.db.models import Q
 from django.core.mail import send_mail
@@ -209,7 +209,7 @@ def upvote(request, post_id):
         p.upvote += 1
         p.save()
         return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'upvote',
-                                                    'post': p, 'user': request.user})
+                                                            'post': p, 'user': request.user, 'has_voted': 'has_voted'})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
@@ -219,8 +219,8 @@ def down_vote(request, post_id):
         p = get_object_or_404(Post, pk=post_id)
         p.upvote -= 1
         p.save()
-        return render_to_response("posts/down_vote.html", {'post_id': post_id, 'type': 'down_vote',
-                                                           'post': p, 'user': request.user})
+        return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'down_vote',
+                                                               'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 

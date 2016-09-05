@@ -32,7 +32,7 @@
             <p>Please login to post a comment.</p>
             {% endif %}
              <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
-                <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a>
+                <a href="/posts/{{post.id}}/down_vote/" method="post"><button type="button" class="btn btn-info">Vote Down</button></a>
             <br/>
             <br/>
             {% for comment in post.comments.all reversed %}

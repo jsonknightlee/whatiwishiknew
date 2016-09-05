@@ -159,6 +159,11 @@ opacity: 0.5;
 filter: alpha(opacity=50);
 }
 
+.bump{
+margin-top:2px;
+margin-right:20px;
+}
+
 .login{
 
 margin-top: 100px;
