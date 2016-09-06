@@ -46,7 +46,6 @@
 
             <div class="test">{{ post.post_body|markdown }} </div>
 
-
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
                 <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
@@ -54,7 +53,7 @@
             <br/>
             <br/>
 
-         <div id="comm" class="collapse">
+           <div id="comm" class="collapse">
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
 
@@ -72,21 +71,8 @@
 
              {% endif %}
             {% endfor %}
-         </div>
-<!--
-               {% for comment in post.comments.all reversed %}
-                <br/>
-                    <div id="comm" class="collapse">
-                        <h4><strong>{{ comment.author_comments }}</strong></h4>
-                            <div class="tiny"><span class="dark"><strong>Commented @ </strong></span> {{ comment.created_at }}</div>
-                                <p><span class="text">{{ comment.text|linebreaks }}</span></p>
 
-
-                <br/>
-
-                      </div>
-                {% endfor %}
--->
+        </div>
 
         </div>
         <br/>
