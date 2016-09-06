@@ -50,12 +50,12 @@
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
                <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
-               <button class="blab myBtn" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
+               <button class="blab"  data-toggle="collapse" data-target="#comm" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
 
                <br/>
                <br/>
 
-               <div id="comm" class="drop">
+               <div id="comm" class="collapse">
                {% for comment in post.comments.all reversed %}
                {% if user.is_authenticated or comment.approved_comment %}
                     <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
@@ -84,9 +84,9 @@
 
 -->
                 <br/>
-            </div>
-                {% endfor %}
 
+                {% endfor %}
+</div>
 
 
         <br/>
