@@ -49,30 +49,31 @@
 
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
-                <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
-                <button class="blab" data-toggle="collapse" data-target="#comm" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
-            <br/>
-            <br/>
+               <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
+               <button class="blab myBtn" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
 
-         <div id="comm" class="collapse">
-            {% for comment in post.comments.all reversed %}
-            {% if user.is_authenticated or comment.approved_comment %}
-            <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
-            <div class="date">
-            {% if request.user.is_superuser %}
-            {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                <a class="btn btn-default" href="{% url 'posts:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-            {% endif %}
-            {% else %}
-            {% endif %}
-            </div>
-            <p><span class="text">{{ comment.text|linebreaks }}</span></p>
-             <br/>
+               <br/>
+               <br/>
 
-            {% endif %}
-            {% endfor %}
-          </div>
+               <div id="comm" class="drop">
+               {% for comment in post.comments.all reversed %}
+               {% if user.is_authenticated or comment.approved_comment %}
+                    <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+                    <div class="date">
+                        {% if request.user.is_superuser %}
+                            {% if not comment.approved_comment %}
+                                <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                                <a class="btn btn-default" href="{% url 'posts:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                            {% endif %}
+                        {% else %}
+                        {% endif %}
+                    </div>
+                     <p><span class="text">{{ comment.text|linebreaks }}</span></p>
+                     <br/>
+
+                    {% endif %}
+                    {% endfor %}
+                  </div>
 <!--
                {% for comment in post.comments.all reversed %}
                 <br/>
@@ -81,14 +82,13 @@
                             <div class="tiny"><span class="dark"><strong>Commented @ </strong></span> {{ comment.created_at }}</div>
                                 <p><span class="text">{{ comment.text|linebreaks }}</span></p>
 
-
-                <br/>
-
-                      </div>
-                {% endfor %}
 -->
+                <br/>
+            </div>
+                {% endfor %}
 
-        </div>
+
+
         <br/>
         <br/>
     <div class="hline"></div>
