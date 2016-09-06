@@ -11,8 +11,8 @@
                 <div class="panel-body">
 
                         {% csrf_token %}
-                        <h1 class="fof author">{{ post.username }}</h1>
-                        <h4 class="author">Bio:</h4>
+                        <h1 class="fof">Your Profile: {{ post.username }}</h1>
+                        <h4>Bio:</h4>
                         <h5>{{ post.profile.bio }}</h5>
                         <h4 class="author">Your Profile Picture: </h4>
                         {% if post.profile.avatar.url %}
@@ -25,20 +25,13 @@
                     <h5>{{ post.first_name }}</h5>
                     <h4 class="author">Last Name:</h4>
                     <h5>{{ post.last_name }}</h5>
-                    <br/>
-                    <h4><strong>Posts for {{post.username}}:</strong></h4>
+                    <h4 class="author">Posts by User:</h4>
                     {% for p in posts %}
-                        <h3><a href="{% url 'posts:detail' post.id %}"> {{ p.post_title}}</a> </h3>
-                        <span class="topic"> {{post.category}}</span>
-                        <span class="tiny"> on {{p.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
+                    <p><strong> Posted by </strong> <span class="idex"><a href="{% url 'posts:view_user' username=post.user.username user_id=post.user_id %}"><strong>{{ post.user.username }}</strong></a>
+                        &nbsp;<img src="{{ post.user.profile.avatar.url}}" class="post-thumb"/> </span>
+                        <span class="biography cursive"> {{ post.user.profile.bio }}</span> <br/><span class="topic"> {{post.category}}</span>
+                        <br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
 
-                        <a href="{% url 'posts:detail' post.id %}">
-                        {% if p.image %}
-                            <img src="{{ p.image.url }}" class="post-thumb"/>
-                        {% else %}
-
-                        {% endif %}
-                        </a>
                     {% endfor %}
 
 

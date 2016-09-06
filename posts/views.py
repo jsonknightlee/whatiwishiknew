@@ -205,11 +205,11 @@ def login_user(request):
 
 def upvote(request, post_id):
     if request.user.is_authenticated():
-        p = get_object_or_404(Post, pk=post_id)
-        p.upvote += 1
-        p.save()
-        return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'upvote',
-                                                            'post': p, 'user': request.user, 'has_voted': 'has_voted'})
+       p = get_object_or_404(Post, pk=post_id)
+       p.upvote += 1
+       p.save()
+       return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'upvote',
+                                                                'post': p, 'user': request.user, 'has_voted': 'has_voted'})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
@@ -289,7 +289,8 @@ def handler400(request):
     return response
 
 
-def view_user(request, user):
-    post = Post.objects.filter(user=user)
-    viewit = {'post': post}
+def view_user(request, username, user_id):
+    post = User.objects.get(username=username)
+    posts = Post.objects.filter(user_id=user_id).order_by("post_date")
+    viewit = {'post': post, 'posts': posts}
     return render(request, 'posts/view_user.html', viewit)
