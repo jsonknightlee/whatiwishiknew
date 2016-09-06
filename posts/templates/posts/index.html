@@ -55,34 +55,24 @@
             <br/>
 
          <div id="comm" class="collapse">
-        <br/>
-            {% if user.is_authenticated %}
-        <a class="btn btn-primary" href="{% url 'posts:add_comment_to_post' pk=post.pk %}">Add comment</a>
-            {% else %}
-        <a class="btn btn-primary" href="">Add comment</a>
-            <br/>
-            <p>Please login to post a comment.</p>
-            {% endif %}
-        <br/>
-            <br/>
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
 
                 <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
             <div class="date">
            {% if request.user.is_superuser %}
-          {% if not comment.approved_comment %}
+           {% if not comment.approved_comment %}
                 <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
                 <a class="btn btn-default" href="{% url 'posts:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
             {% endif %}
                 {% else %}
                 {% endif %}
-        </div>
+            </div>
             <p><span class="text">{{ comment.text|linebreaks }}</span></p><br/>
 
              {% endif %}
             {% endfor %}
-             </div>
+         </div>
 <!--
                {% for comment in post.comments.all reversed %}
                 <br/>
