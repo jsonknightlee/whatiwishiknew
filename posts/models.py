@@ -25,7 +25,7 @@ class Post(models.Model):
     post_title = models.CharField(max_length=250)
     post_body = models.TextField(max_length=10000)
     category = models.ForeignKey(Categories, related_name='hats')
-    image = models.FileField(default='static/placeholder.jpg', blank=True, null=True)
+    image = models.FileField(default='static/placeholder.jpg', blank=True)
     email = models.EmailField(default='')
     post_date = models.DateTimeField(default=now)
     upvote = models.IntegerField(default=0)
