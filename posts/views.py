@@ -104,26 +104,21 @@ def post_create(request):
         form = PostForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             post = form.save(commit=False)
-            if not post.image:
-                post.user = request.user
-                post.image = request.FILES['image']
-                file_type = post.image.url.split('.')[-1]
-                file_type = file_type.lower()
-                if file_type not in IMAGE_FILE_TYPES:
-                    context = {
-                        'post': post,
-                        'form': form,
-                        'error_message': 'Image file must be PNG, JPG, or JPEG',
-                    }
-                    return render(request, 'posts/post_form.html', context)
-            else:
-                post.image = None
-                post.save()
-                return render(request, 'posts/detail.html', {'post': post})
-        context = {
-            "form": form,
-        }
-    return render(request, 'posts/post_form.html', context)
+            post.user = request.user
+            post.image = request.FILES['image']
+            file_type = post.image.url.split('.')[-1]
+            file_type = file_type.lower()
+            if file_type not in IMAGE_FILE_TYPES:
+                context = {
+                    'post': post,
+                    'form': form,
+                    'error_message': 'Image file must be PNG, JPG, or JPEG',
+                }
+                return render(request, 'posts/post_form.html', context)
+            post.save()
+            context_post = {'post': post}
+            return render(request, 'posts/detail.html', context_post)
+        return render(request, 'posts/post_form.html', {'form': form})
 
 
 def welcome(request):
@@ -291,6 +286,6 @@ def handler400(request):
 
 def view_user(request, username, user_id):
     post = User.objects.get(username=username)
-    posts = Post.objects.filter(user_id=user_id).order_by("post_date")
+    posts = Post.objects.filter(user_id=user_id)
     viewit = {'post': post, 'posts': posts}
     return render(request, 'posts/view_user.html', viewit)

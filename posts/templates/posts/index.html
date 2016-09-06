@@ -42,7 +42,6 @@
                         {% if post.image %}
                             <img src="{{ post.image.url }}" class="img-responsive"/>
                         {% else %}
-
                         {% endif %}
                 </a>
                 <br/>
@@ -53,7 +52,7 @@
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
                <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
-               <button class="blab" data-toggle="collapse" data-target="#comm" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
+               <button class="blab" type="button" style="background:none;border:none;color: #337AB7">Comments {{ post.comments.count }}</button>
 
                <br/>
                <br/>
@@ -111,9 +110,12 @@
                 </div>
 
 <script>
-    $(".collapse").click(function(){
-    $(this).parent().find('.collapse').collapse('show');
+   $(document).ready(function(){
+    $(".blab").click(function(){
+        $(this).siblings('.collapse').collapse('show');
+        $(this).siblings('.collapse').collapse('hide');
     });
+});
 </script>
 
 {% endblock %}
