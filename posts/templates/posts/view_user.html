@@ -11,22 +11,22 @@
                 <div class="panel-body">
 
                         {% csrf_token %}
-                        <h1 class="fof author">{{ post.username }}</h1>
+                        <h1 class="fof author">{{ poster.username }}</h1>
                         <h4 class="author">Bio:</h4>
-                        <h5>{{ post.profile.bio }}</h5>
+                        <h5>{{ poster.profile.bio }}</h5>
                         <h4 class="author">Your Profile Picture: </h4>
-                        {% if post.profile.avatar.url %}
-                        <img class="img-responsive" src="{{ post.profile.avatar.url }}" alt="{{ post.username }}" />
+                        {% if poster.profile.avatar.url %}
+                        <img class="img-responsive" src="{{ post.profile.avatar.url }}" alt="{{ poster.username }}" />
                         {% else %}
-                        <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ post.username }}"/>
+                        <img class="img-responsive" src="{{ 'static/placeholder.jpg' }}" alt="{{ poster.username }}"/>
                         {% endif %}
                     <br/>
                     <h4 class="author">Name:</h4>
-                    <h5>{{ post.first_name }}</h5>
+                    <h5>{{ poster.first_name }}</h5>
                     <h4 class="author">Last Name:</h4>
-                    <h5>{{ post.last_name }}</h5>
+                    <h5>{{ poster.last_name }}</h5>
                     <br/>
-                    <h4><strong>Posts for {{post.username}}:</strong></h4>
+                    <h4><strong>Posts for {{poster.username}}:</strong></h4>
                     {% for p in posts %}
                         <h3><a href="{% url 'posts:detail' post.id %}"> {{ p.post_title}}</a> </h3>
                         <span class="topic"> {{post.category}}</span>

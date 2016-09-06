@@ -33,7 +33,10 @@
     <div class="content">
 
         <h1 class="fof"><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title}}</a> </h1>
-            <p><strong> Posted by </strong> <span class="idex"><a href="{% url 'posts:view_user' username=post.user.username user_id=post.user_id %}"><strong>{{ post.user.username }}</strong></a>&nbsp;<img src="{{ post.user.profile.avatar.url}}" class="post-thumb"/> </span><span class="biography cursive"> {{ post.user.profile.bio }}</span> <br/><span class="topic"> {{post.category}}</span><br/><span class="tiny"> on {{post.post_date}}  <br/>With {{post.upvote}} Recommendations</span> </p>
+            <p><strong> Posted by </strong> <span class="idex"><a href="{% url 'posts:view_user' username=post.user.username user_id=post.user_id %}"><strong>{{ post.user.username }}</strong></a>&nbsp;<img src="{{ post.user.profile.avatar.url}}" class="post-thumb"/></span>
+                <span class="biography cursive"> {{ post.user.profile.bio }}</span> <br/><span class="topic"> {{post.category}}</span>
+                <br/>
+                <span class="tiny"> on {{post.post_date}} <br/>With {{post.upvote}} Recommendations</span> </p>
 
                  <a href="{% url 'posts:detail' post.id %}">
                         {% if post.image %}
@@ -44,7 +47,7 @@
                 </a>
                 <br/>
 
-            <div class="test">{{ post.post_body|markdown }} </div>
+                <div class="test">{{ post.post_body|markdown }} </div>
 
 
                <br/>
@@ -55,11 +58,11 @@
                <br/>
                <br/>
 
-               <div id="comm" class="collapse">
+               <div class="collapse" id="comm">
                {% for comment in post.comments.all reversed %}
                {% if user.is_authenticated or comment.approved_comment %}
-                    <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
-                    <div class="date">
+                    <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>{{ comment.created_at }}</strong></span></h4>
+                    <!--div class="date">
                         {% if request.user.is_superuser %}
                         {% if not comment.approved_comment %}
                         <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
@@ -67,7 +70,7 @@
                         {% endif %}
                         {% else %}
                         {% endif %}
-                    </div>
+                    </div-->
                      <p><span class="text">{{ comment.text|linebreaks }}</span></p>
                      <br/>
                     {% endif %}
@@ -81,10 +84,11 @@
                             <div class="tiny"><span class="dark"><strong>Commented @ </strong></span> {{ comment.created_at }}</div>
                                 <p><span class="text">{{ comment.text|linebreaks }}</span></p>
 
--->
-        </div>
-                {% endfor %}
 
+
+                {% endfor %}
+-->
+          </div>
     <br/>
     <br/>
     <div class="hline"></div>
