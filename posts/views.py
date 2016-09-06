@@ -94,7 +94,7 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     post_pk = comment.post.pk
     comment.delete()
-    return redirect(request, 'posts:detail', post_pk)
+    return redirect(request, 'posts:detail', pk=post_pk)
 
 
 def post_create(request):
@@ -209,7 +209,7 @@ def upvote(request, post_id):
         p.upvote += 1
         p.save()
         return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'upvote',
-                                                        'post': p, 'user': request.user, 'has_voted': 'has_voted'})
+                                                                'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
@@ -220,7 +220,7 @@ def down_vote(request, post_id):
         p.upvote -= 1
         p.save()
         return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'down_vote',
-                                                        'post': p, 'user': request.user})
+                                                               'post': p, 'user': request.user})
     else:
         return HttpResponseRedirect('/posts/login_user/?next=%s' % request.path)
 
@@ -290,7 +290,7 @@ def handler400(request):
 
 
 def view_user(request, username, user_id):
-    poster = User.objects.get(username=username)
+    post = User.objects.get(username=username)
     posts = Post.objects.filter(user_id=user_id).order_by("post_date")
-    viewit = {'poster': poster, 'posts': posts}
+    viewit = {'post': post, 'posts': posts}
     return render(request, 'posts/view_user.html', viewit)

@@ -62,7 +62,7 @@
                {% for comment in post.comments.all reversed %}
                {% if user.is_authenticated or comment.approved_comment %}
                     <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>{{ comment.created_at }}</strong></span></h4>
-                    <!--div class="date">
+                    <div class="date">
                         {% if request.user.is_superuser %}
                         {% if not comment.approved_comment %}
                         <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
@@ -70,7 +70,7 @@
                         {% endif %}
                         {% else %}
                         {% endif %}
-                    </div-->
+                    </div>
                      <p><span class="text">{{ comment.text|linebreaks }}</span></p>
                      <br/>
                     {% endif %}
@@ -109,5 +109,11 @@
                     <span class="st_email_large" displayText="Email"></span>
                     <span class="st_sharethis_large" displayText="ShareThis"></span>
                 </div>
+
+<script>
+    $(".collapse").click(function(){
+    $(this).parent().find('.collapse').collapse('show');
+    });
+</script>
 
 {% endblock %}
