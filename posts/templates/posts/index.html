@@ -46,6 +46,7 @@
 
             <div class="test">{{ post.post_body|markdown }} </div>
 
+
                <br/>
                <a href="/posts/{{post.id}}/upvote/" method="post"><button type="button" class="btn btn-info"> Vote Up| {{ post.upvote }}</button></a> |
                 <a href="/posts/{{post.id}}/down_vote/" method="post">Vote Down</a> |
@@ -53,26 +54,39 @@
             <br/>
             <br/>
 
-           <div id="comm" class="collapse">
+         <div id="comm" class="collapse">
             {% for comment in post.comments.all reversed %}
             {% if user.is_authenticated or comment.approved_comment %}
-
-                <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
+            <h4 class="author"><strong>{{ comment.author_comments.username }}</strong><span class="tiny"><strong>  {{ comment.created_at }}</strong></span></h4>
             <div class="date">
-           {% if request.user.is_superuser %}
-           {% if not comment.approved_comment %}
+            {% if request.user.is_superuser %}
+            {% if not comment.approved_comment %}
                 <a class="btn btn-default" href="{% url 'posts:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
                 <a class="btn btn-default" href="{% url 'posts:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
             {% endif %}
-                {% else %}
-                {% endif %}
+            {% else %}
+            {% endif %}
             </div>
-            <p><span class="text">{{ comment.text|linebreaks }}</span></p><br/>
+            <p><span class="text">{{ comment.text|linebreaks }}</span></p>
+             <br/>
 
-             {% endif %}
+            {% endif %}
             {% endfor %}
+          </div>
+<!--
+               {% for comment in post.comments.all reversed %}
+                <br/>
+                    <div id="comm" class="collapse">
+                        <h4><strong>{{ comment.author_comments }}</strong></h4>
+                            <div class="tiny"><span class="dark"><strong>Commented @ </strong></span> {{ comment.created_at }}</div>
+                                <p><span class="text">{{ comment.text|linebreaks }}</span></p>
 
-        </div>
+
+                <br/>
+
+                      </div>
+                {% endfor %}
+-->
 
         </div>
         <br/>
