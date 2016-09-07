@@ -75,18 +75,13 @@
                     {% endif %}
                     {% endfor %}
                   </div>
-<!--
-               {% for comment in post.comments.all reversed %}
-                <br/>
-                    <div id="comm" class="collapse">
-                        <h4><strong>{{ comment.author_comments }}</strong></h4>
-                            <div class="tiny"><span class="dark"><strong>Commented @ </strong></span> {{ comment.created_at }}</div>
-                                <p><span class="text">{{ comment.text|linebreaks }}</span></p>
-
-
-
-                {% endfor %}
--->
+                {% if user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'posts:add_comment_to_post' pk=post.pk %}">Add comment</a>
+            {% else %}
+        <a class="btn btn-primary" href="">Add comment</a>
+            <br/>
+            <p>Please login to post a comment.</p>
+            {% endif %}
           </div>
     <br/>
     <br/>
