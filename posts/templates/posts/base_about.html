@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="wiwik" content="What i wish i knew about everything.">
+    <meta charset="UTF-8">
     <title>{% block title %}Wiwik{% endblock %}</title>
     {% load staticfiles %}
+
+    <!--
+<link rel="shortcut icon" type="image/png" href="{% static 'static/favicon.ico' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Belgrano|Amethysta|IM+Fell+Great+Primer+SC|Open+Sans" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{% static 'posts/style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.boostrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="{% static 'posts/js/main.js' %}"></script>
+-->
 
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -22,32 +32,11 @@
       $('.test').truncate({max_length: 100});
     });
     </script>
-    <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Post",
-          "name": "BruceWayne",
-          "url": "http://www.wiwik.online",
-          "Posts": [{
-            "@type": "Posts",
-            "post_title": "What I Wish I Knew",
-            "post_body": "wiwik"
-          }]
-        }
-    </script>
+
 
 </head>
 <body>
 
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5L6TBN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5L6TBN');</script>
-<!-- End Google Tag Manager -->
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -71,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </a>
                 </li>
                 <li class="">
-                    <a>
+                    <a href="">
                         <span class="gap" aria-hidden="true"></span>&nbsp;
                     </a>
                 </li>
@@ -94,30 +83,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                  <li class="">
                     <a href="{% url 'userprofile:your_profile' %}">
                         {% if user.profile.avatar.url %}
-                        <span><img class="thumb" alt="avatar-thumb" src="{{ user.profile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        <span><img class="thumb" src="{{ user.profile.avatar.url }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% else %}
-                        <span><img class="thumb" src="{{ '/images/placeholder.jpg/' }}" ></span>&nbsp; <span class="navguide">{{user.username}}</span>
+                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">{{user.first_name}}&nbsp;{{user.last_name}}</span>
                         {% endif %}
                     </a>
                 </li>
                 {% else %}
-                {% if request.session.session_key %}
                  <li class="">
                     <a href="{% url 'posts:login_user' %}">
                         <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor {{ request.session.session_key|truncatechars:7 }}</span>
                     </a>
                 </li>
-                {% else %}
-                 <li class="">
-                    <a href="{% url 'posts:login_user' %}">
-                        <span><img class="thumb" src="{{ '/posts/placeholder.jpg/' }}"></span>&nbsp; <span class="navguide">Visitor </span>
-                    </a>
-                </li>
-                    {% endif %}
                 {% endif %}
-                <li class="">
+                <li class="active">
                     <a href="{% url 'posts:about' %}">
-                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; <span class="navguide">About</span>
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp; <span class="navhome">About</span>
                     </a>
                 </li>
                 {% if user.is_authenticated %}
@@ -140,36 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </nav>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="left">
-
-            <h3>WIWIK TOPICS</h3>
-            <div class="topics">
-                <a href="{% url 'posts:category_detail' '1' %}"><h5>Animals</h5></a>
-                <a href="{% url 'posts:category_detail' '2' %}"><h5>Art & Creative</h5></a>
-                <a href="{% url 'posts:category_detail' '3' %}"><h5>Astronomy & Space Travel</h5></a>
-                <a href="{% url 'posts:category_detail' '4' %}"><h5>Business</h5></a>
-                <a href="{% url 'posts:category_detail' '5' %}"><h5>Education</h5></a>
-                <a href="{% url 'posts:category_detail' '6' %}"><h5>Entertainment</h5></a>
-                <a href="{% url 'posts:category_detail' '7' %}"><h5>Family & Parenting</h5></a>
-                <a href="{% url 'posts:category_detail' '8' %}"><h5>Food</h5></a>
-                <a href="{% url 'posts:category_detail' '9' %}"><h5>Health & Lifestyle</h5></a>
-                <a href="{% url 'posts:category_detail' '10' %}"><h5>Innovation</h5></a>
-                <a href="{% url 'posts:category_detail' '11' %}"><h5>Medical</h5></a>
-                <a href="{% url 'posts:category_detail' '12' %}"><h5>Nature</h5></a>
-                <a href="{% url 'posts:category_detail' '13' %}"><h5>People</h5></a>
-                <a href="{% url 'posts:category_detail' '14' %}"><h5>Politics</h5></a>
-                <a href="{% url 'posts:category_detail' '15' %}"><h5>Relationships</h5></a>
-                <a href="{% url 'posts:category_detail' '16' %}"><h5>Science</h5></a>
-                <a href="{% url 'posts:category_detail' '17' %}"><h5>Sport</h5></a>
-                <a href="{% url 'posts:category_detail' '18' %}"><h5>Tech</h5></a>
-                <a href="{% url 'posts:category_detail' '19' %}"><h5>Travel & Automobiles</h5></a>
-                <a href="{% url 'posts:category_detail' '20' %}"><h5>General</h5></a>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 {% block body %}

@@ -97,6 +97,7 @@ def comment_remove(request, pk):
     return redirect(request, 'posts:detail', pk=post_pk)
 
 
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 def post_create(request):
     if not request.user.is_authenticated():
         return render(request, 'posts/login_user.html')
