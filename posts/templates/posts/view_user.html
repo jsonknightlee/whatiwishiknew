@@ -13,7 +13,11 @@
                         {% csrf_token %}
                         <h1 class="fof author">{{ post.username }}</h1>
                         <h4 class="author">Bio:</h4>
+                        {% if post.profile.bio %}
                         <h5>{{ post.profile.bio }}</h5>
+                        {% else %}
+                        <p>No bio for user.</p>
+                        {% endif %}
                         <h4 class="author">Your Profile Picture: </h4>
                         {% if post.profile.avatar.url %}
                         <img class="img-responsive" src="{{ post.profile.avatar.url }}" alt="{{ post.username }}" />
