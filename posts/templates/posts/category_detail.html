@@ -9,7 +9,6 @@
         <br/>
 
         {% for post in categories.hats.all %}
-
             <h3><a href="{% url 'posts:detail' post.id %}"> {{ post.post_title }}</a> </h3>
 
             <h5><strong>Posted by : </strong><span class="author"><strong>{{ post.user}}</strong></span></h5>
@@ -17,8 +16,8 @@
             <a href="#"><button type="button" class="btn btn-info"> Votes | {{ post.upvote }}</button></a>
             <br/>
             <br/>
-
         {% endfor %}
+
     </div>
 </div>
 
