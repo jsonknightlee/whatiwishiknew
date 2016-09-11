@@ -213,8 +213,9 @@ def upvote(request, post_id):
 def down_vote(request, post_id):
     if request.user.is_authenticated():
         p = get_object_or_404(Post, pk=post_id)
-        p.upvote -= 1
-        p.save()
+        if p.upvote > 0:
+            p.upvote -= 1
+            p.save()
         return render_to_response("posts/detail.html", {'post_id': post_id, 'type': 'down_vote',
                                                                'post': p, 'user': request.user})
     else:

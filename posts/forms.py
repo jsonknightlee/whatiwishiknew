@@ -12,6 +12,8 @@ class UserForm(forms.ModelForm):
         fields = ['username', 'email', 'first_name', 'last_name', 'password', ]
 
 
+
+
 class CommentForm(forms.ModelForm):
 
     class Meta:

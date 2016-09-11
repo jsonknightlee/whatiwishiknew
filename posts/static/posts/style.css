@@ -527,3 +527,43 @@ margin-top:100px;
 color: #FFFFFF;
 }
 
+/* POPUP */
+
+#mask {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  width: 440px;
+  height: 500px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#boxes #dialog {
+  width: 750px;
+  height: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+}
+
+#popupfoot {
+  font-size: 16pt;
+  position: absolute;
+  bottom: 500px;
+  width: 250px;
+  left: 550px;
+}
