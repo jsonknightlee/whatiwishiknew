@@ -282,7 +282,7 @@ def handler500(request):
 def handler400(request):
     response = render_to_response('400.html', {},
                                   context_instance=RequestContext(request))
-    response.status_code = 500
+    response.status_code = 400
     return response
 
 
