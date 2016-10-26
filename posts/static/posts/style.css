@@ -1,6 +1,6 @@
 /* Home */
 
-#weber .AW-Form-211709634{
+#weber.AW-Form-211709634{
     margin-top: 200px;
     padding-top: 200px;
     position: relative;
@@ -286,6 +286,8 @@ font-family: 'Belgrano', sans-serif;
 .navbar-default .navbar-brand{
     font-family: 'Lora', serif;
     color: #ffffff;
+    position: relative;
+    z-index: 998;
 }
 
 
