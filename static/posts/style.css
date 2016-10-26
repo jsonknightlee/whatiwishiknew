@@ -53,6 +53,7 @@ margin-left: 450px;
 navbar-nav{
 
     color: #ffffff;
+    margin-top: 100px;
 }
 
 .ignite{
@@ -81,10 +82,12 @@ text-shadow: 25px 25px 4px #ffffff;
 
 .navbar{
     border-radius: 0;
+    z-index: 998;
 }
 
 .navguide{
     color: #ffffff;
+    z-index: 998;
 }
 
 a:active{
@@ -174,6 +177,7 @@ font-family: 'Belgrano', sans-serif;
 .navbar-default {
     background-color: #000000;
     border-bottom: 3px solid #A5C5D7;
+    z-index: 998;
 }
 
 
