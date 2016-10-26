@@ -2,6 +2,7 @@
 
 #weber .AW-Form-211709634{
     margin-top: 200px;
+    position: relative;
     z-index: 999;
 }
 
@@ -143,6 +144,7 @@ text-shadow: 30px 25px 3px #ffffff;
 
 .navbar{
     border-radius: 0;
+    position: relative;
     z-index: 998;
 }
 
