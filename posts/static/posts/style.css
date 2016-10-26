@@ -279,6 +279,8 @@ font-family: 'Belgrano', sans-serif;
     background-color: #000000;
     color: #ffffff;
     border-bottom: 3px solid #A5C5D7;
+    position: relative;
+    z-index: 998;
 }
 
 .navbar-default .navbar-brand{
