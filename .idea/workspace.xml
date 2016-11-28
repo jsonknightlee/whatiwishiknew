@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc4ab4e1-2137-4196-8b71-678b2d9b37c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/static/posts/style.css" afterPath="$PROJECT_DIR$/posts/static/posts/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/posts/style.css" afterPath="$PROJECT_DIR$/static/posts/style.css" />
     </list>
     <ignored path="wiwik.iws" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="386">
+              <caret line="289" column="10" selection-start-line="289" selection-start-column="10" selection-end-line="289" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -995,8 +994,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="386">
+          <caret line="289" column="10" selection-start-line="289" selection-start-column="10" selection-end-line="289" selection-end-column="10" />
           <folding />
         </state>
       </provider>
