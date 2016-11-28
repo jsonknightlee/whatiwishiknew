@@ -4,9 +4,8 @@
 .homer{
     background-image: url("images/bg.jpg");
     width: 1600px;
-    height: 1480px;
-    position: fixed;
-    margin-top: -20px;
+    height: 1280px;
+    position: absolute;
 }
 
 .comment{
