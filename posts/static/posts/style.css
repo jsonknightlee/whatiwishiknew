@@ -10,8 +10,9 @@
 .homer{
     background-image: url("images/bg.jpg");
     width: 1600px;
-    height: 1480px;
+    height: 1280px;
     position: fixed;
+    margin-top: 0;
 }
 
 .comment{
