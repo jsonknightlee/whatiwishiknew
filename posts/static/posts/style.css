@@ -4,8 +4,8 @@
     background-image: url("images/bg.jpg");
     width: 1600px;
     height: 1280px;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    margin-top: 0;
 }
 
 .comment{
