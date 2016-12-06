@@ -4,7 +4,7 @@
     background-image: url("images/bg.jpg");
     width: 1600px;
     height: 1280px;
-    position: absolute;
+    position: fixed;
     margin-top: 0;
 }
 
