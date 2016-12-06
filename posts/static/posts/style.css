@@ -5,6 +5,7 @@
     width: 1600px;
     height: 1280px;
     position: fixed;
+    background-repeat: no-repeat;
     margin-top: 0;
 }
 
