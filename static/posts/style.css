@@ -4,7 +4,7 @@
 .homer{
     background-image: url("images/bg.jpg");
     width: 1600px;
-    height: 1280px;
+    height: 1080px;
     position: fixed;
 }
 
@@ -390,4 +390,18 @@ font-size: 14px;
 .upvote{
 
 margin-top:100px;
+}
+
+
+/* Mobile Scaling */
+
+@media screen and (max-width: 1020px) {
+  .main-welcome, .content, .main-detail, .main, .about {
+    float: none;
+    width: auto;
+  }
+ .topics, .row, .quotes {
+    display:none;
+  }
+  p{ font-size: 2em; }
 }

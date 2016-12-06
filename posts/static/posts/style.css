@@ -3,10 +3,9 @@
 .homer{
     background-image: url("images/bg.jpg");
     width: 1600px;
-    height: 1280px;
+    height: 1080px;
     position: fixed;
     background-repeat: no-repeat;
-    margin-top: 0;
 }
 
 .comment{
