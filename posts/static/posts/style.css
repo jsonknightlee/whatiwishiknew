@@ -5,6 +5,7 @@
     width: 1600px;
     height: 1280px;
     position: fixed;
+    top: 0;
 }
 
 .comment{
@@ -18,7 +19,7 @@
 
 .land{
 font-weight: bold;
-padding-top: 50px;
+padding-top: 20px;
 margin-left: 500px;
 color: #000000;
 font-family: 'Amethysta', sans-serif;
@@ -530,4 +531,17 @@ margin-top:100px;
 color: #FFFFFF;
 }
 
+}
+
+
+/* Mobile Optimization  */
+@media screen and (max-width: 1020px) {
+  .main-welcome, .content, .main-detail, .main, .about {
+    float: none;
+    width: auto;
+  }
+ .topics, .row, .quotes {
+    display:none;
+  }
+  p{ font-size: 2em; }
 }
