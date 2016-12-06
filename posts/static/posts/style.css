@@ -538,6 +538,7 @@ color: #FFFFFF;
   .main-welcome, .content, .main-detail, .main, .about {
     float: none;
     width: auto;
+    margin-left: 2px;
   }
  .topics, .row, .quotes {
     display:none;

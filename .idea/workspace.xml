@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+            <state relative-caret-position="487">
+              <caret line="401" column="21" selection-start-line="401" selection-start-column="21" selection-end-line="401" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="545" column="1" selection-start-line="545" selection-start-column="1" selection-end-line="545" selection-end-column="1" />
+            <state relative-caret-position="470">
+              <caret line="539" column="16" selection-start-line="539" selection-start-column="16" selection-end-line="539" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -191,8 +191,8 @@
         <option value="$PROJECT_DIR$/posts/templates/posts/index.html" />
         <option value="$PROJECT_DIR$/wiwik/urls.py" />
         <option value="$PROJECT_DIR$/posts/templates/posts/base_landing.html" />
-        <option value="$PROJECT_DIR$/static/posts/style.css" />
         <option value="$PROJECT_DIR$/posts/static/posts/style.css" />
+        <option value="$PROJECT_DIR$/static/posts/style.css" />
       </list>
     </option>
   </component>
@@ -991,18 +991,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/posts/style.css">
+    <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+        <state relative-caret-position="470">
+          <caret line="539" column="16" selection-start-line="539" selection-start-column="16" selection-end-line="539" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/static/posts/style.css">
+    <entry file="file://$PROJECT_DIR$/static/posts/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="545" column="1" selection-start-line="545" selection-start-column="1" selection-end-line="545" selection-end-column="1" />
+        <state relative-caret-position="487">
+          <caret line="401" column="21" selection-start-line="401" selection-start-column="21" selection-end-line="401" selection-end-column="21" />
           <folding />
         </state>
       </provider>
